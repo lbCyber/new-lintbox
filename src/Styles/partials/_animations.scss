@@ -19,11 +19,12 @@
     height: 0px;
   }
 
-  .profilePic:hover {
-    animation: profileFlash 1 forwards .175s;
+  .profilePic:not(.profilePicHold):hover {
+    animation: profileFlash 1 forwards .17s;
   }
 
-  .profilePic:hover .mePicLayerAnim, .mePicLayer3Hold {
+  .profilePic:hover .mePicLayerAnim,
+  .profilePicHold .mePicLayer3 {
     width: calc($ppSize * 1.5);
     height: calc($ppSize * 1.5);
     border-radius: 20%;
@@ -37,8 +38,8 @@
     50% {
       filter: brightness(5);
     }
-    100% {
-    filter: brightness(1);
+    to {
+      filter: brightness(1);
     }
   }
 }

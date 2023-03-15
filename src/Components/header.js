@@ -8,13 +8,13 @@ const Header = () => {
     <>
       <header className="">
         <div className="wrapper">
-          <div className="profilePic" onClick={()=>setPicHold(!picHold)}>
+          <div className={`profilePic${picHold ? ' profilePicHold' : ''}`} onClick={()=>setPicHold(!picHold)}>
             <img
               className="mePicLayer1"
               src="./assets/mePic-Asphodel.jpg"
               alt="It's me, Paul. Hello!" />
             <div className="mePicLayerAnim mePicLayer2"></div>
-            <div className={`mePicLayerAnim mePicLayer3${picHold ? ' mePicLayer3Hold' : ''}`}></div>
+            <div className="mePicLayerAnim mePicLayer3"></div>
           </div>
           <div className="">
             <h2>

@@ -1,0 +1,17 @@
+.mePicLayer2 {
+  display: none;
+}
+
+.mePicLayer3 {
+  background-repeat: no-repeat;
+  background-size: $ppSize;
+  width: $ppSize;
+  height: $ppSize;
+  border-radius: unset;
+  opacity: 0;
+  transition: 2s all;
+}
+
+.profilePic:hover .mePicLayer3, .mePicLayer3Hold {
+  opacity: 1;
+}

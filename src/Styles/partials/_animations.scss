@@ -1,0 +1,56 @@
+@media (prefers-reduced-motion: no-preference) {
+
+  // Header Profile Pic
+
+  .mePicLayer2 {
+    transition: .4s all;
+  }
+
+  .mePicLayer3 {
+    transition: .4s .04s all;
+  }
+
+  .mePicLayerAnim {
+    background-repeat: no-repeat;
+    background-size: $ppSize;
+    border-radius: $ppSize;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+  }
+
+  .profilePic:hover {
+    animation: profileFlash 1 forwards .175s;
+  }
+
+  .profilePic:hover .mePicLayerAnim, .mePicLayer3Hold {
+    width: calc($ppSize * 1.5);
+    height: calc($ppSize * 1.5);
+    border-radius: 20%;
+    transition-duration: 1s;
+  }
+
+  @keyframes profileFlash {
+    from {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(5);
+    }
+    100% {
+    filter: brightness(1);
+    }
+  }
+}
+
+/* REDUCED MOTION FLAGS */
+// Use to remove elements used in animations
+// Or create smoother transitions to avoid jolts
+
+@media (prefers-reduced-motion: reduce) {
+  @import "./reduced-motion";
+}
+
+.reducedMotionNoOS {
+  @import "./reduced-motion";
+}

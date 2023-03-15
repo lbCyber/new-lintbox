@@ -1,0 +1,24 @@
+.profilePic {
+  position: relative;
+  width: $ppSize;
+  height: $ppSize;
+  overflow: hidden;
+  .mePicLayer1, .mePicLayer2, .mePicLayer3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.mePicLayer1 {
+  width: 100%;
+  height: 100%;
+}
+
+.mePicLayer2 {
+  background-image: url('../../assets/mePic-Asphodel-silhouette.png');
+}
+
+.mePicLayer3 {
+  background-image: url('../../assets/mePic-Asphodel-2.jpg');
+}

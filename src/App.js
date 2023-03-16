@@ -1,4 +1,5 @@
 import "./Styles/main.scss";
+import Preloader from "./Components/preloader";
 import Nav from "./Components/nav";
 import Header from "./Components/header";
 import Intro from "./Components/intro";
@@ -10,6 +11,7 @@ import Footer from "./Components/footer";
 function App() {
   return (
     <div className="MainApp">
+      <Preloader />
       <Nav />
       <main>
         <Header />

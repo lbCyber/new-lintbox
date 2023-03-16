@@ -12,6 +12,6 @@
   transition: 2s all;
 }
 
-.profilePic:hover .mePicLayer3, .mePicLayer3Hold {
+.profilePic.activeAnim .mePicLayer3 {
   opacity: 1;
 }

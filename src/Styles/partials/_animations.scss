@@ -2,12 +2,14 @@
 
   // Header Profile Pic
 
-  .mePicLayer2 {
+  .activeAnim .mePicLayer2 {
     transition: .4s all;
+    z-index: 1;
   }
 
-  .mePicLayer3 {
+  .activeAnim .mePicLayer3 {
     transition: .4s .04s all;
+    z-index: 10;
   }
 
   .mePicLayerAnim {
@@ -19,12 +21,11 @@
     height: 0px;
   }
 
-  .profilePic:not(.profilePicHold):hover {
-    animation: profileFlash 1 forwards .17s;
+  .profilePic.activeAnim {
+    animation: profileFlash 1 forwards .25s;
   }
 
-  .profilePic:hover .mePicLayerAnim,
-  .profilePicHold .mePicLayer3 {
+  .activeAnim .mePicLayerAnim {
     width: calc($ppSize * 1.5);
     height: calc($ppSize * 1.5);
     border-radius: 20%;
@@ -35,8 +36,11 @@
     from {
       filter: brightness(1);
     }
-    50% {
-      filter: brightness(5);
+    25% {
+      filter: brightness(1);
+    }
+    75% {
+      filter: brightness(1.5) invert(20%) saturate(250%);
     }
     to {
       filter: brightness(1);

@@ -3,6 +3,13 @@
 @import "partials/header";
 @import "partials/animations";
 
+.preload {
+  width: 1px;
+  height: 1px;
+  opacity: 0.00000000001;
+  z-index: -9999;
+}
+
 .devIcon {
   max-width: 100px;
 }

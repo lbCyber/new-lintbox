@@ -3,10 +3,12 @@
   width: $ppSize;
   height: $ppSize;
   overflow: hidden;
-  .mePicLayer1, .mePicLayer2, .mePicLayer3 {
+  animation: none;
+  img, div {
     position: absolute;
     left: 0;
     top: 0;
+    pointer-events: none;
   }
 }
 
@@ -21,4 +23,8 @@
 
 .mePicLayer3 {
   background-image: url('../../assets/mePic-Asphodel-2.jpg');
+}
+
+.profilePicAlt .mePicLayer3 {
+  background-image: url('../../assets/mePic-Asphodel-1.jpg');
 }

@@ -22,14 +22,14 @@
     }
 
     .profilePic.activeAnim {
-      animation: profileFlash 1 forwards .25s;
+      animation: profileFlash 1 forwards .5s;
     }
 
     .activeAnim .mePicLayerAnim {
       width: calc($ppSize * 1.5);
       height: calc($ppSize * 1.5);
       border-radius: 20%;
-      transition-duration: 1s;
+      transition-duration: 1.4s;
     }
 
     @keyframes profileFlash {

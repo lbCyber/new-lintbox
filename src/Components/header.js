@@ -11,7 +11,7 @@ const Header = () => {
       setProfilePic(!profilePic);
       setAnimReady(false);
       setProfileToggle(!profileToggle);
-      setTimeout(()=>setAnimReady(true), 3000);
+      setTimeout(()=>setAnimReady(true), 1000);
     }
   };
 

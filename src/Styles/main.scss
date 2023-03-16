@@ -1,23 +1,7 @@
 @import "partials/normalize";
 @import "partials/variables";
+@import "partials/base";
 @import "partials/header";
+@import "partials/work";
+@import "partials/skills";
 @import "partials/animations";
-
-.preload {
-  display: flex;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow: hidden;
-  position: fixed;
-  left:0;
-  top:0;
-  pointer-events: none;
-  div, img {
-    opacity: 0;
-    width: 100%;
-  }
-}
-
-.devIcon {
-  max-width: 100px;
-}

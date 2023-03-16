@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Header = () => {
+const Header = ({ doPreload }) => {
   const [profilePic, setProfilePic] = useState(true);
   const [profileToggle, setProfileToggle] = useState(false);
   const [animReady, setAnimReady] = useState(true);
@@ -33,7 +33,8 @@ const Header = () => {
         <div className="wrapper">
           <div
             className={`profilePic${profileToggle ? " activeAnim" : ""} ${profilePic ? "" : " profilePicAlt"}`}
-            onClick={profileAction}>
+            onClick={profileAction}
+            onMouseOver={()=>doPreload("profilePics")}>
             <img
               className="mePicLayer1"
               src={profilePic ? "./assets/mePic-Asphodel-1.jpg" : "./assets/mePic-Asphodel-2.jpg"}

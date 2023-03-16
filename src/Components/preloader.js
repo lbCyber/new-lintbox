@@ -1,20 +1,31 @@
 import { useEffect } from "react";
 
-const Preloader = () => {
-
-  const imgURLs = [
+const imgURLs = {
+  profilePic: [
     "../assets/mePic-Asphodel-silhouette.png",
-    "../assets/mePic-Asphodel-2.jpg",
+    "../assets/mePic-Asphodel-1.jpg",
     "../assets/mePic-Asphodel-2.jpg"
   ]
+}
 
-  const doPreload = () => {
-    imgURLs.forEach((img)=>{
+const doPreload = (pics = "all") => {
+  const preloadImages = (arr = []) => {
+    arr.forEach((img)=>{
       const newImage = new Image();
       newImage.src = img;
       window[img] = newImage;
     })
   }
+  if (pics === "all") {
+    for (let category in imgURLs) {
+      preloadImages(imgURLs[category])
+    }
+  } else {
+    preloadImages(imgURLs[pics])
+  }
+}
+
+const Preloader = () => {
 
   useEffect(() => {
     doPreload();
@@ -22,11 +33,11 @@ const Preloader = () => {
 
   return (
     <div className="preload">
-      {imgURLs.map((img, k)=>{
-        return <img src={img} alt="" key={k} aria-hidden />
+      {imgURLs.profilePic.map((img, k)=>{
+        return <img src={img} key={k} alt="" aria-hidden />
       })}
     </div>
   )
 }
 
-export default Preloader;
+export {Preloader as default, doPreload};

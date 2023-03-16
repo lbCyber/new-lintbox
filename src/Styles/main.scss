@@ -3,11 +3,16 @@
 @import "partials/header";
 @import "partials/animations";
 
-.preload {
+.preload, .preload div, .preload img { // requires dimension and visibility to trick browser into preload
   width: 1px;
   height: 1px;
-  opacity: 0.00000000001;
+  opacity: 0.01;
+  overflow: hidden;
   z-index: -9999;
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
 }
 
 .devIcon {

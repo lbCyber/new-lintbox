@@ -37,7 +37,7 @@ const Header = () => {
             <img
               className="mePicLayer1"
               src={profilePic ? "./assets/mePic-Asphodel-1.jpg" : "./assets/mePic-Asphodel-2.jpg"}
-              alt="It's me, Paul. Hello!"/>
+              alt="It's me, Paul. Hello!" />
             <div className="mePicLayerAnim mePicLayer2"></div>
             <div className="mePicLayerAnim mePicLayer3"></div>
           </div>

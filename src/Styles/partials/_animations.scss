@@ -1,49 +1,50 @@
 @media (prefers-reduced-motion: no-preference) {
+  .MainApp:not(.reducedMotionNoOS) {
+    // Header Profile Pic
 
-  // Header Profile Pic
-
-  .activeAnim .mePicLayer2 {
-    transition: .4s all;
-    z-index: 1;
-  }
-
-  .activeAnim .mePicLayer3 {
-    transition: .4s .04s all;
-    z-index: 10;
-  }
-
-  .mePicLayerAnim {
-    background-repeat: no-repeat;
-    background-size: $ppSize;
-    border-radius: $ppSize;
-    overflow: hidden;
-    width: 0px;
-    height: 0px;
-  }
-
-  .profilePic.activeAnim {
-    animation: profileFlash 1 forwards .25s;
-  }
-
-  .activeAnim .mePicLayerAnim {
-    width: calc($ppSize * 1.5);
-    height: calc($ppSize * 1.5);
-    border-radius: 20%;
-    transition-duration: 1s;
-  }
-
-  @keyframes profileFlash {
-    from {
-      filter: brightness(1);
+    .activeAnim .mePicLayer2 {
+      transition: .4s all;
+      z-index: 1;
     }
-    25% {
-      filter: brightness(1);
+
+    .activeAnim .mePicLayer3 {
+      transition: .4s .04s all;
+      z-index: 10;
     }
-    75% {
-      filter: brightness(1.5) invert(20%) saturate(250%);
+
+    .mePicLayerAnim {
+      background-repeat: no-repeat;
+      background-size: $ppSize;
+      border-radius: $ppSize;
+      overflow: hidden;
+      width: 0px;
+      height: 0px;
     }
-    to {
-      filter: brightness(1);
+
+    .profilePic.activeAnim {
+      animation: profileFlash 1 forwards .25s;
+    }
+
+    .activeAnim .mePicLayerAnim {
+      width: calc($ppSize * 1.5);
+      height: calc($ppSize * 1.5);
+      border-radius: 20%;
+      transition-duration: 1s;
+    }
+
+    @keyframes profileFlash {
+      from {
+        filter: brightness(1);
+      }
+      25% {
+        filter: brightness(1);
+      }
+      75% {
+        filter: brightness(1.5) invert(20%) saturate(250%);
+      }
+      to {
+        filter: brightness(1);
+      }
     }
   }
 }

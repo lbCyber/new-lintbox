@@ -1,4 +1,9 @@
-const Nav = () => {
+const Nav = ({ reduceMotion, setReduceMotion }) => {
+
+  const reducedClick = () => {
+    setReduceMotion(!reduceMotion)
+  }
+
   return (
     <>
       <nav>
@@ -15,6 +20,7 @@ const Nav = () => {
             <span className="">//</span>
             <li>contact</li>
           </ul>
+          <h5 onClick={()=>reducedClick()}>{reduceMotion ? "Reduced Motion is ON" : "Reduced Motion is OFF"}</h5>
         </div>
       </nav>
     </>

@@ -25,11 +25,11 @@ function App() {
           setCurrentPage={setCurrentPage}
           />
         <main>
-          {currentPage === 0 ? <Header doPreload={doPreload}/> : null}
-          {currentPage === 0 ? <Intro doPreload={doPreload}/> : null}
-          {currentPage === 1 ? <Work doPreload={doPreload}/> : null}
-          {currentPage === 2 ? <Skills doPreload={doPreload}/> : null}
-          {currentPage === 3 ? <Contact doPreload={doPreload}/> : null}
+          <Header  doPreload={doPreload}/>
+          <Intro   doPreload={doPreload}/>
+          <Work    doPreload={doPreload}/>
+          <Skills  doPreload={doPreload}/>
+          <Contact doPreload={doPreload}/>
         </main>
         <Footer />
       </div>

@@ -28,7 +28,7 @@
     .activeAnim .mePicLayerAnim {
       width: calc($ppSize * 1.5);
       height: calc($ppSize * 1.5);
-      border-radius: 20%;
+      border-radius: 0 20% 20%;
       transition-duration: 1.4s;
     }
 

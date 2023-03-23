@@ -14,7 +14,7 @@ const Skills = () => {
     ["wordpress", "Wordpress"],
   ];
   return (
-    <section className="">
+    <section className="" id="skills">
       <div className="wrapper">
         <div className="">
           <h5 className="">I am a creator</h5>

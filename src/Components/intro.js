@@ -1,7 +1,7 @@
 const Intro = () => {
   return (
     <>
-      <section className="">
+      <section className="" id="intro">
         <div className="wrapper">
           <h5>Hey there!</h5>
           <p>

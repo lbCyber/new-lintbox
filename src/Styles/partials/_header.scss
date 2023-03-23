@@ -1,9 +1,13 @@
 .profilePic {
   position: relative;
-  width: $ppSize;
-  height: $ppSize;
+  width: calc($ppSize + 3px);
+  height: calc($ppSize + 3px);
   overflow: hidden;
   animation: none;
+  border-radius: 0 75% 0 0;
+  border-top: 3px solid $accent1;
+  border-right: 3px solid $accent1;
+  top: -3px;
   img, div {
     position: absolute;
     left: 0;
@@ -13,8 +17,8 @@
 }
 
 .mePicLayer1 {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .mePicLayer2 {
@@ -27,4 +31,77 @@
 
 .profilePicAlt .mePicLayer3 {
   background-image: url('../../assets/mePic-Asphodel-1.jpg');
+}
+
+.introSection {
+  height: 100vh;
+  padding-top: 115px;
+  position: relative;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image:
+    linear-gradient(75deg, darken($darkGrey, 17%) 0% 27.85%,
+    transparent 28% 100%),
+    linear-gradient(115deg, darken($darkSlate, 21%) 0% 29.85%,
+    transparent 30% 100%),
+    linear-gradient(150deg, rgba(163, 178, 196, 0.03) 0% 34.85%,
+    transparent 35% 100%);
+  overflow: hidden;
+  min-height: 768px;
+}
+
+
+.headerContainer {
+  height: calc(100% - 100px);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 485px;
+  h3 {
+    margin-top: 20px;
+    width: 1000px;
+    text-align: right;
+  }
+}
+
+.centerHeaderItems {
+  display: flex;
+  width: 1000px;
+  height: 300px;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 3px solid $lightBlue;
+  border-radius: 5px;
+  overflow: hidden;
+  h2 {
+    z-index: 5;
+  }
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 500px;
+  line-height: 100px;
+  h1,
+  h2 {
+    width: 500px;
+    padding-left: 50px;
+  }
+}
+
+.headerTitles {
+  margin-top: 20px;
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

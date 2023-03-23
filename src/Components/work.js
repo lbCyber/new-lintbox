@@ -45,7 +45,7 @@ const Work = () => {
     setWork(sortedObj);
   };
   return (
-    <section className="">
+    <section className="" id="work">
       <div className="wrapper">
         <div className="">
           <h5 className="">Sort by:</h5>

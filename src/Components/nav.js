@@ -7,18 +7,26 @@ const Nav = ({ reduceMotion, setReduceMotion, currentPage, setCurrentPage }) => 
   return (
     <>
       <nav>
-        <div className="wrapper">
-          <ul className="">
-            <li onClick={()=>setCurrentPage(0)}>bio</li>
+        <div className="navContainer">
+          <ul className="navOptions">
+            <li onClick={()=>setCurrentPage(0)}>
+              <a href="#intro">bio</a>
+              </li>
             {/* eslint-disable-next-line*/}
             <span className="">//</span>
-            <li onClick={()=>setCurrentPage(1)}>work</li>
+            <li onClick={()=>setCurrentPage(1)}>
+              <a href="#work">work</a>
+              </li>
             {/* eslint-disable-next-line*/}
             <span className="">//</span>
-            <li onClick={()=>setCurrentPage(2)}>skills</li>
+            <li onClick={()=>setCurrentPage(2)}>
+              <a href="#skills">skills</a>
+              </li>
             {/* eslint-disable-next-line*/}
             <span className="">//</span>
-            <li onClick={()=>setCurrentPage(3)}>contact</li>
+            <li onClick={()=>setCurrentPage(3)}>
+              <a href="#contact">contact</a>
+              </li>
           </ul>
           <h5 onClick={()=>reducedClick()}>{reduceMotion ? "Reduced Motion is ON" : "Reduced Motion is OFF"}</h5>
         </div>

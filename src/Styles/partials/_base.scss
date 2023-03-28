@@ -18,16 +18,11 @@
 /*  BASE STYLES */
 
 * {
-  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
   scrollbar-width: thin;
   &::-webkit-scrollbar {
     width: 1rem;
   }
-  &::-webkit-scrollbar-track {
-    opacity: 0;
-  }
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 25px;
   }
 }
@@ -46,18 +41,12 @@ html {
 
 body {
   font-size: 1rem;
-  color: #fff;
   position: relative;
-  background-color: #0f0f15;
 }
 
 a,
 .upArrow {
   text-decoration: none;
-  color: inherit;
-  &:hover {
-    color: $amber;
-  }
 }
 
 img {
@@ -70,19 +59,16 @@ ul {
 }
 
 h1 {
-  color: $lightBlue;
   font-size: 5rem;
   font-weight: 500;
 }
 
 h2 {
-  color: #fff;
   font-size: 4rem;
   font-weight: 400;
 }
 
 h3 {
-  color: $amber;
   text-transform: uppercase;
 }
 
@@ -93,7 +79,6 @@ h4 {
 
 h5 {
   font-family: $special;
-  color: $lightBlue;
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
@@ -106,14 +91,11 @@ h6 {
   text-transform: uppercase;
   font-size: 0.6rem;
   line-height: 26px;
-  color: $lightBlue;
   &.ds {
     font-size: .4rem;
-    color: #777;
     text-align: center;
     transform: translateY(-5px);
     font-style: italic;
-    text-shadow: 0 0 5px #000
   }
   &.smallCaption {
     font-size: .5rem;
@@ -152,11 +134,9 @@ section {
 }
 
 .sectionTitle {
-  color: $lightBlue;
   font-size: 6rem;
   opacity: 0.5;
   z-index: 0;
-  text-shadow: 0 0 10px #000;
   user-select: none;
   cursor: default;
   z-index: 0;
@@ -169,11 +149,6 @@ section {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-image:
-    linear-gradient(-25deg, $darkGrey 0 27.5%, transparent 28% 100%),
-    linear-gradient(-65deg, $darkSlate 0% 29.5%, transparent 30% 100%),
-    linear-gradient(-80deg, rgba(163, 178, 196, 0.45) 0 34.5%, transparent 35% 100%),
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
   background-repeat: no-repeat;
   background-size: 100%;
   opacity: 0.5;
@@ -185,6 +160,5 @@ section {
   position: absolute;
   left: 0;
   border-radius: 50px;
-  background-image: linear-gradient(#000 10%, transparent 33% 67%, #000 90%);
   z-index: 1;
 }

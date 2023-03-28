@@ -1,7 +1,11 @@
-const Nav = ({ reduceMotion, setReduceMotion, currentPage, setCurrentPage }) => {
+const Nav = ({ reduceMotion, setReduceMotion, currentPage, setCurrentPage, lightMode, setLightMode }) => {
 
   const reducedClick = () => {
     setReduceMotion(!reduceMotion)
+  }
+
+  const lightModeClick = () => {
+    setLightMode(!lightMode)
   }
 
   return (
@@ -29,6 +33,7 @@ const Nav = ({ reduceMotion, setReduceMotion, currentPage, setCurrentPage }) => 
               </li>
           </ul>
           <h5 onClick={()=>reducedClick()}>{reduceMotion ? "Reduced Motion is ON" : "Reduced Motion is OFF"}</h5>
+          <h5 onClick={()=>lightModeClick()}>{lightMode ? "Light Mode is ON" : "Light Mode is OFF"}</h5>
         </div>
       </nav>
     </>

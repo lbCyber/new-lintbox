@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCamera } from '@fortawesome/free-solid-svg-icons'
 
 const Header = ({ doPreload }) => {
   const [profilePic, setProfilePic] = useState(true);
   const [profileToggle, setProfileToggle] = useState(false);
   const [animReady, setAnimReady] = useState(false);
   const [firstLoad, setFirstLoad] = useState(true);
+  const [clickedActive, setClickedActive] = useState(false);
 
   const profileAction = () => {
     if (animReady) {
       setProfilePic(!profilePic);
       setAnimReady(false);
       setProfileToggle(!profileToggle);
+      setClickedActive(true);
       setTimeout(()=>setAnimReady(true), 1500);
     }
   };
@@ -39,13 +43,17 @@ const Header = ({ doPreload }) => {
             <div
             className={`profilePic${profileToggle ? " activeAnim" : ""} ${profilePic ? "" : " profilePicAlt"}`}
             onClick={profileAction}
-            onMouseOver={()=>doPreload("profilePics")}>
+            onMouseOver={()=>doPreload("profilePics")}
+            onMouseLeave={()=>setClickedActive(false)}>
               <img
                 className="mePicLayer1"
                 src={profilePic ? "./assets/mePic-Asphodel-1.jpg" : "./assets/mePic-Asphodel-2.jpg"}
                 alt="It's me, Paul. Hello!" />
               <div className="mePicLayerAnim mePicLayer2"></div>
               <div className="mePicLayerAnim mePicLayer3"></div>
+              <div className={`faceSwitchIcon${clickedActive ? " clickedActive" : ""}`}>
+                <FontAwesomeIcon icon={faCamera} />
+              </div>
             </div>
             <div className="headerText">
               <h2>Hi there!</h2>

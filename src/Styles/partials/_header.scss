@@ -33,6 +33,37 @@
   background-image: url('../../assets/mePic-Asphodel-1.jpg');
 }
 
+.faceSwitchIcon {
+  background: #000A;
+  color: #FFF;
+  width: calc($ppSize + 3px);
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  opacity: 0;
+  transition: 2s .2s opacity;
+  pointer-events: none;
+  svg {
+    width: 100px;
+    height: 100px;
+    padding-right: 20%;
+  }
+}
+
+.profilePic {
+  &.activeAnim:hover .faceSwitchIcon {
+    opacity: .8;
+  }
+  &:hover .faceSwitchIcon.clickedActive {
+    opacity: 0;
+    transition: unset;
+  }
+}
+
 .introSection {
   height: 100vh;
   padding-top: 115px;
@@ -41,13 +72,6 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image:
-    linear-gradient(75deg, darken($darkGrey, 17%) 0% 27.85%,
-    transparent 28% 100%),
-    linear-gradient(115deg, darken($darkSlate, 21%) 0% 29.85%,
-    transparent 30% 100%),
-    linear-gradient(150deg, rgba(163, 178, 196, 0.03) 0% 34.85%,
-    transparent 35% 100%);
   overflow: hidden;
   min-height: 768px;
 }

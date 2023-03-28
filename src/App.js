@@ -12,15 +12,18 @@ import Footer from "./Components/footer";
 function App() {
 
   const [reduceMotion, setReduceMotion] = useState(false);
+  const [lightMode, setLightMode] = useState(false);
   const [currentPage, setCurrentPage] = useState(0)
 
   return (
     <>
       <Preloader />
-      <div className={`MainApp${reduceMotion ? " reducedMotionNoOS" : ""}`}>
+      <div className={`MainApp${reduceMotion ? " reducedMotionNoOS" : ""}${lightMode ? " lightMode" : ""}`}>
         <Nav
           reduceMotion={reduceMotion}
           setReduceMotion={setReduceMotion}
+          lightMode={lightMode}
+          setLightMode={setLightMode}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
           />

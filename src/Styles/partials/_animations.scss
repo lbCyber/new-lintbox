@@ -3,12 +3,17 @@
     // Header Profile Pic
 
     .activeAnim .mePicLayer2 {
-      transition: .4s all;
+      transition: .4s width, .4s height, .4s border-radius;
       z-index: 1;
     }
 
     .activeAnim .mePicLayer3 {
-      transition: .4s .04s all;
+      transition:
+        .4s .04s width,
+        .4s .04s height,
+        .4s .04s border-radius,
+        .2s opacity,
+        .2s filter;
       z-index: 10;
     }
 

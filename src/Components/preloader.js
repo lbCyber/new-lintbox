@@ -29,7 +29,7 @@ const Preloader = () => {
 
   useEffect(() => {
     doPreload();
-  })
+  },[])
 
   return (
     <div className="preload">

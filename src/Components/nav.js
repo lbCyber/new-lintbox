@@ -13,24 +13,24 @@ const Nav = ({ reduceMotion, setReduceMotion, currentPage, setCurrentPage, light
       <nav>
         <div className="navContainer">
           <ul className="navOptions">
-            <li onClick={()=>setCurrentPage(0)}>
+            <li>
               <a href="#intro">bio</a>
-              </li>
+            </li>
             {/* eslint-disable-next-line*/}
             <span className="">//</span>
-            <li onClick={()=>setCurrentPage(1)}>
+            <li>
               <a href="#work">work</a>
-              </li>
+            </li>
             {/* eslint-disable-next-line*/}
             <span className="">//</span>
-            <li onClick={()=>setCurrentPage(2)}>
+            <li>
               <a href="#skills">skills</a>
-              </li>
+            </li>
             {/* eslint-disable-next-line*/}
             <span className="">//</span>
-            <li onClick={()=>setCurrentPage(3)}>
+            <li>
               <a href="#contact">contact</a>
-              </li>
+            </li>
           </ul>
           <h5 onClick={()=>reducedClick()}>{reduceMotion ? "Reduced Motion is ON" : "Reduced Motion is OFF"}</h5>
           <h5 onClick={()=>lightModeClick()}>{lightMode ? "Light Mode is ON" : "Light Mode is OFF"}</h5>

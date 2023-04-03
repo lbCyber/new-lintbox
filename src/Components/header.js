@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
 
-const Header = ({ doPreload }) => {
+const Header = ({ doPreload, background }) => {
   const [profilePic, setProfilePic] = useState(true);
   const [profileToggle, setProfileToggle] = useState(false);
   const [animReady, setAnimReady] = useState(false);
@@ -35,7 +35,7 @@ const Header = ({ doPreload }) => {
   }, [profileToggle, firstLoad])
 
   return (
-    <header className="introSection">
+    <header className="introSection" style={background}>
       <div className="wrapper">
         <div className="headerContainer">
           <div className="centerHeaderItems">
@@ -64,6 +64,7 @@ const Header = ({ doPreload }) => {
           <h3>And I'm a web and software developer</h3>
         </div>
       </div>
+      <button class="learnMore aboutButton" aria-label="click here to learn more">&lt;learn more/&gt;</button>
     </header>
   );
 };

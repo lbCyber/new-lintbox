@@ -45,22 +45,11 @@
   justify-content: center;
   z-index: 15;
   opacity: 0;
-  transition: 2s .2s opacity;
   pointer-events: none;
   svg {
     width: 100px;
     height: 100px;
     padding-right: 20%;
-  }
-}
-
-.profilePic {
-  &.activeAnim:hover .faceSwitchIcon {
-    opacity: .8;
-  }
-  &:hover .faceSwitchIcon.clickedActive {
-    opacity: 0;
-    transition: unset;
   }
 }
 

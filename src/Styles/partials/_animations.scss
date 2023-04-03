@@ -1,6 +1,21 @@
 @media (prefers-reduced-motion: no-preference) {
   .MainApp:not(.reducedMotionNoOS) {
+
     // Header Profile Pic
+
+    .faceSwitchIcon {
+      transition: .5s .2s opacity;
+    }
+
+    .profilePic {
+      &.activeAnim:hover .faceSwitchIcon {
+        opacity: .8;
+      }
+      &:hover .faceSwitchIcon.clickedActive {
+        opacity: 0;
+        transition: unset;
+      }
+    }
 
     .activeAnim .mePicLayer2 {
       transition: .4s width, .4s height, .4s border-radius;

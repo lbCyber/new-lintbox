@@ -1,7 +1,7 @@
 .profilePic {
   position: relative;
-  width: calc($ppSize + 3px);
-  height: calc($ppSize + 3px);
+  width: 483px;
+  height: 483px;
   overflow: hidden;
   animation: none;
   border-radius: 0 75% 0 0;
@@ -19,6 +19,7 @@
 .mePicLayer1 {
   max-width: 100%;
   max-height: 100%;
+  position: relative !important;
 }
 
 .mePicLayer2 {
@@ -79,7 +80,7 @@
   align-items: center;
   flex-direction: column;
   min-height: 485px;
-  margin-bottom: calc(15px + 4vh);
+  // margin-bottom: calc(15px + 4vh);
   h3 {
     margin-top: 20px;
     width: 1000px;
@@ -89,7 +90,7 @@
 
 .centerHeaderItems {
   display: flex;
-  width: 1000px;
+  max-width: 1000px;
   height: 300px;
   position: relative;
   justify-content: space-between;
@@ -130,26 +131,43 @@
   text-align: center;
 }
 
-.learnMore:after, .learnMore:before {
-  border-bottom: 2px solid #FFF6;
-  border-right: 2px solid #FFF6;
-  content: '';
-  width: 16px;
-  height: 16px;
-  display: block;
-  position: absolute;
-  left: calc(50% - 8px);
-  transform: scaleX(2.5) rotate(45deg);
+// .learnMore:after, .learnMore:before {
+//   border-bottom: 2px solid #FFF6;
+//   border-right: 2px solid #FFF6;
+//   content: '';
+//   width: 16px;
+//   height: 16px;
+//   display: block;
+//   position: absolute;
+//   left: calc(50% - 8px);
+//   transform: scaleX(2.5) rotate(45deg);
+// }
+
+// .learnMore:after {
+//   top: 4.5rem;
+// }
+
+// .learnMore:before {
+//   top: 5.25rem
+// }
+
+.learnMore {
+  width: 80%;
+  margin: 0 auto;
+  a {
+    color: $accent2;
+  }
 }
 
-.learnMore:after {
-  top: 4.5rem;
+.incomplete {
+  font-size: 1.7rem;
+  margin-bottom: calc(15px + 4vh);
 }
 
-.learnMore:before {
-  top: 5.25rem
+.resumeHeadingTop {
+  font-size: 1.5rem;
 }
 
-.resumeHeading {
+.resumeHeadingBottom {
   margin: 3px 0 0;
 }

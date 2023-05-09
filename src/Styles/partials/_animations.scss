@@ -1,82 +1,96 @@
-@media (prefers-reduced-motion: no-preference) {
-  .MainApp:not(.reducedMotionNoOS) {
+@media screen {
+  @media (prefers-reduced-motion: no-preference) {
+    .MainApp:not(.reducedMotionNoOS) {
 
-    // Header Profile Pic
+      // Header Profile Pic
 
-    .faceSwitchIcon {
-      transition: .5s .2s opacity;
-    }
-
-    .profilePic {
-      &.activeAnim:hover .faceSwitchIcon {
-        opacity: .8;
+      .faceSwitchIcon {
+        transition: .5s .2s opacity;
       }
-      &:hover .faceSwitchIcon.clickedActive {
-        opacity: 0;
-        transition: unset;
+
+      .profilePic {
+        &.activeAnim:hover .faceSwitchIcon {
+          opacity: .8;
+        }
+        &:hover .faceSwitchIcon.clickedActive {
+          opacity: 0;
+          transition: unset;
+        }
       }
-    }
 
-    .activeAnim .mePicLayer2 {
-      transition: .4s width, .4s height, .4s border-radius;
-      z-index: 1;
-    }
-
-    .activeAnim .mePicLayer3 {
-      transition:
-        .4s .04s width,
-        .4s .04s height,
-        .4s .04s border-radius,
-        .2s opacity,
-        .2s filter;
-      z-index: 10;
-    }
-
-    .mePicLayerAnim {
-      background-repeat: no-repeat;
-      background-size: $ppSize;
-      border-radius: $ppSize;
-      overflow: hidden;
-      width: 0px;
-      height: 0px;
-    }
-
-    .profilePic.activeAnim {
-      animation: profileFlash 1 forwards .5s;
-    }
-
-    .activeAnim .mePicLayerAnim {
-      width: calc($ppSize * 1.5);
-      height: calc($ppSize * 1.5);
-      border-radius: 0 20% 20%;
-      transition-duration: 1.4s;
-    }
-
-    @keyframes profileFlash {
-      from {
-        filter: brightness(1);
+      .activeAnim .mePicLayer2 {
+        transition: .4s width, .4s height, .4s border-radius;
+        z-index: 1;
       }
-      25% {
-        filter: brightness(1);
+
+      .activeAnim .mePicLayer3 {
+        transition:
+          .4s .04s width,
+          .4s .04s height,
+          .4s .04s border-radius,
+          .2s opacity,
+          .2s filter;
+        z-index: 10;
       }
-      75% {
-        filter: brightness(1.5) invert(20%) saturate(250%);
+
+      .mePicLayerAnim {
+        background-repeat: no-repeat;
+        background-size: 480px;
+        border-radius: 480px;
+        overflow: hidden;
+        width: 0px;
+        height: 0px;
       }
-      to {
-        filter: brightness(1);
+
+      .profilePic.activeAnim {
+        animation: profileFlash 1 forwards .5s;
+      }
+
+      .activeAnim .mePicLayerAnim {
+        width: 720px;
+        height: 720px;
+        border-radius: 0 20% 20%;
+        transition-duration: 1.4s;
+      }
+
+      @keyframes profileFlash {
+        from {
+          filter: brightness(1);
+        }
+        25% {
+          filter: brightness(1);
+        }
+        75% {
+          filter: brightness(1.5) invert(20%) saturate(250%);
+        }
+        to {
+          filter: brightness(1);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .mePicLayerAnim {
+          background-size: 360px;
+          border-radius: 360px;
+        }
+
+        .activeAnim .mePicLayerAnim {
+          width: 540px;
+          height: 540px;
+        }
       }
     }
   }
-}
 
-/* REDUCED MOTION FLAGS */
-// Use to remove elements used in animations
-// Or create smoother transitions to avoid jolts
+  /* REDUCED MOTION FLAGS */
+  // Use to remove elements used in animations
+  // Or create smoother transitions to avoid jolts
 
-@media (prefers-reduced-motion: reduce) {
-  @import "./reduced-motion";
-}
+  @media (prefers-reduced-motion: reduce) {
+    @import "./reduced-motion";
+  }
 
-.reducedMotionNoOS {
-  @import "./reduced-motion";
+  .reducedMotionNoOS {
+    @import "./reduced-motion";
+  }
 }

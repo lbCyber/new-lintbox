@@ -1,0 +1,73 @@
+@media screen and (max-width:1024px) {
+  .wrapper {
+    max-width: 768px;
+  }
+
+  .headerContainer {
+    min-height: 360px;
+  }
+
+  .centerHeaderItems {
+    width: 750px;
+    height: 230px;
+  }
+
+  .headerContainer h3 {
+    width: unset;
+  }
+
+  .headerText {
+    width: 360px;
+    margin-top: 15px;
+    h1, h2 {
+      padding-left: 30px;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .profilePic {
+    width: 363px;
+    height: 363px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .wrapper {
+    width: 95%;
+  }
+
+  .profilePic {
+    display: none !important;
+  }
+
+  .headerContainer {
+    min-height: 360px;
+  }
+
+  .centerHeaderItems {
+    max-width: 100%;
+    min-width: 380px;
+  }
+
+  .headerContainer h3 {
+    width: unset;
+  }
+
+  .learnMore {
+    width: 100%;
+  }
+
+  .resumeHeadingBottom {
+    margin-top: 15px;
+  }
+
+}

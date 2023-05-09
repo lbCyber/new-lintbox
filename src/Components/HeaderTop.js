@@ -64,8 +64,9 @@ const Header = ({ doPreload, background }) => {
           <h3>And I'm a web and software developer</h3>
         </div>
         <div className="learnMore">
-          <h4>Learn More</h4>
-          <h5 className="resumeHeading"><a href="https://lintbox.com/procca-resume-general.pdf" target="_blank" rel="noopener noreferrer">(Or cut right to it and see my resume here)</a></h5>
+          <p className="incomplete">I'm currently working on a large-scale site redesign, so check back soon for more!</p>
+          <h5 className="resumeHeadingTop">In the meantime, you can find me at LinkedIn <a href="https://www.linkedin.com/in/procc/" rel="noopener noreferrer">here</a>!</h5>
+          <h5 className="resumeHeadingBottom">Or you can cut right to it and see my resume <a href="https://lintbox.com/procca-resume-general.pdf" target="_blank" rel="noopener noreferrer">here</a>!</h5>
         </div>
       </div>
     </header>

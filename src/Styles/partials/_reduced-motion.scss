@@ -8,9 +8,9 @@
 
 .activeAnim .mePicLayer3 {
   background-repeat: no-repeat;
-  background-size: $ppSize;
-  width: $ppSize;
-  height: $ppSize;
+  background-size: 480px;
+  width: 480px;
+  height: 480px;
   opacity: 0;
   animation: reducedMotionPPFade 1 forwards .4s;
 }

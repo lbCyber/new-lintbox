@@ -49,12 +49,12 @@ function App() {
         <main>
           <Header   doPreload={doPreload}
                     background={common.doBackgroundGen(lightMode)}/>
-          <Intro    doPreload={doPreload}/>
+          {/* <Intro    doPreload={doPreload}/>
           <Work     doPreload={doPreload}/>
           <Skills   doPreload={doPreload}/>
-          <Contact  doPreload={doPreload}/>
+          <Contact  doPreload={doPreload}/> */}
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

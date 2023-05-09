@@ -2,7 +2,7 @@ import "./Styles/main.scss";
 import { useState, useEffect } from "react";
 import { default as Preloader, doPreload } from "./Components/Preloader";
 import Nav from "./Components/Nav";
-import Header from "./Components/Header";
+import Header from "./Components/HeaderTop";
 import Intro from "./Components/Intro";
 import Work from "./Components/Work";
 import Skills from "./Components/Skills";

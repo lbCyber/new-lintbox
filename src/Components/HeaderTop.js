@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCamera } from '@fortawesome/free-solid-svg-icons'
+import { faCamera, faPaintbrush } from '@fortawesome/free-solid-svg-icons'
 
 const Header = ({ doPreload, background }) => {
   const [profilePic, setProfilePic] = useState(true);
@@ -52,7 +52,7 @@ const Header = ({ doPreload, background }) => {
               <div className="mePicLayerAnim mePicLayer2"></div>
               <div className="mePicLayerAnim mePicLayer3"></div>
               <div className={`faceSwitchIcon${clickedActive ? " clickedActive" : ""}`}>
-                <FontAwesomeIcon icon={faCamera} />
+                <FontAwesomeIcon icon={faCamera} /><span className="photoSlashPaint">/</span><FontAwesomeIcon icon={faPaintbrush} />
               </div>
             </div>
             <div className="headerText">
@@ -63,8 +63,8 @@ const Header = ({ doPreload, background }) => {
           </div>
           <h3>And I'm a web and software developer</h3>
         </div>
+        <h4 className="learnMore">Learn More</h4>
       </div>
-      <button class="learnMore aboutButton" aria-label="click here to learn more">&lt;learn more/&gt;</button>
     </header>
   );
 };

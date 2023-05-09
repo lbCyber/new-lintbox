@@ -51,7 +51,7 @@ const Header = ({ doPreload, background }) => {
                 alt="It's me, Paul. Hello!" />
               <div className="mePicLayerAnim mePicLayer2"></div>
               <div className="mePicLayerAnim mePicLayer3"></div>
-              <div className={`faceSwitchIcon${clickedActive ? " clickedActive" : ""}`}>
+              <div className={`faceSwitchIcon${clickedActive ? " clickedActive" : ""}`} aria-hidden="true">
                 <FontAwesomeIcon icon={faCamera} /><span className="photoSlashPaint">/</span><FontAwesomeIcon icon={faPaintbrush} />
               </div>
             </div>
@@ -63,7 +63,10 @@ const Header = ({ doPreload, background }) => {
           </div>
           <h3>And I'm a web and software developer</h3>
         </div>
-        <h4 className="learnMore">Learn More</h4>
+        <div className="learnMore">
+          <h4>Learn More</h4>
+          <h5 className="resumeHeading"><a href="https://lintbox.com/procca-resume-general.pdf" target="_blank" rel="noopener noreferrer">(Or cut right to it and see my resume here)</a></h5>
+        </div>
       </div>
     </header>
   );

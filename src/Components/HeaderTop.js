@@ -66,7 +66,8 @@ const Header = ({ doPreload, background }) => {
         <div className="learnMore">
           <p className="incomplete">I'm currently working on a large-scale site redesign, so check back soon for more!</p>
           <h5 className="resumeHeadingTop">In the meantime, you can find me at LinkedIn <a href="https://www.linkedin.com/in/procc/" rel="noopener noreferrer">here</a>!</h5>
-          <h5 className="resumeHeadingBottom">Or you can cut right to it and see my resume <a href="https://lintbox.com/procca-resume-general.pdf" target="_blank" rel="noopener noreferrer">here</a>!</h5>
+          <h5 className="resumeHeadingMiddle">Or you can cut right to it and see my resume <a href="https://lintbox.com/procca-resume-general.pdf" target="_blank" rel="noopener noreferrer">here</a>!</h5>
+          <h5 className="resumeHeadingBottom">Or browse the old site <a href="https://lintbox.com/oldindex.html" rel="noopener noreferrer">here</a>!</h5>
         </div>
       </div>
     </header>

@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import { default as Preloader, doPreload } from "./Components/Preloader";
 import Nav from "./Components/Nav";
 import Header from "./Components/HeaderTop";
-import Intro from "./Components/Intro";
-import Work from "./Components/Work";
-import Skills from "./Components/Skills";
-import Contact from "./Components/Contact";
-import Footer from "./Components/Footer";
+// import Intro from "./Components/Intro";
+// import Work from "./Components/Work";
+// import Skills from "./Components/Skills";
+// import Contact from "./Components/Contact";
+// import Footer from "./Components/Footer";
 import common from "./Components/commonFunctions";
 
 function App() {

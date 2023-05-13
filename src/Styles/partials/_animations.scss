@@ -34,12 +34,13 @@
       }
 
       .mePicLayerAnim {
-        background-repeat: no-repeat;
-        background-size: 480px;
         border-radius: 480px;
         overflow: hidden;
         width: 0px;
         height: 0px;
+        img {
+          width: 480px;
+        }
       }
 
       .profilePic.activeAnim {
@@ -70,8 +71,10 @@
 
       @media (max-width: 1024px) {
         .mePicLayerAnim {
-          background-size: 360px;
           border-radius: 360px;
+          img {
+            width: 360px;
+          }
         }
 
         .activeAnim .mePicLayerAnim {

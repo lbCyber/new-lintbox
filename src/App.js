@@ -1,6 +1,5 @@
 import "./Styles/main.scss";
 import { useState, useEffect } from "react";
-import { default as Preloader, doPreload } from "./Components/Preloader";
 import Nav from "./Components/Nav";
 import Header from "./Components/HeaderTop";
 // import Intro from "./Components/Intro";
@@ -32,7 +31,6 @@ function App() {
 
   return (
     <>
-      <Preloader />
       <div className={
         `MainApp
           ${reduceMotion ? " reducedMotionNoOS" : ""}
@@ -47,12 +45,13 @@ function App() {
           setCurrentPage={setCurrentPage}
           />
         <main>
-          <Header   doPreload={doPreload}
-                    background={common.doBackgroundGen(lightMode)}/>
-          {/* <Intro    doPreload={doPreload}/>
-          <Work     doPreload={doPreload}/>
-          <Skills   doPreload={doPreload}/>
-          <Contact  doPreload={doPreload}/> */}
+          <Header
+            background={common.doBackgroundGen(lightMode)}
+          />
+          {/* <Intro />
+          <Work />
+          <Skills />
+          <Contact /> */}
         </main>
         {/* <Footer /> */}
       </div>

@@ -1,43 +1,22 @@
-import { useEffect } from "react";
+const doPreload = async (imgObj,setimgState) => {
+  // ONLY USED IN NICHE CASES
+  const imgURLs = {
+    profilePic: [
+      "../assets/mePic-Asphodel-silhouette.png",
+      "../assets/mePic-Asphodel-1.jpg",
+      "../assets/mePic-Asphodel-2.jpg",
+    ],
+  };
+  const promises = await imgURLs[imgObj].map((src) => {
+    return new Promise(function (resolve, reject) {
+      const img = new Image();
+      img.src = src;
+      img.onload = resolve();
+      img.onerror = reject();
+    });
+  });
+  await Promise.all(promises);
+  setimgState(false);
+};
 
-const imgURLs = {
-  profilePic: [
-    "../assets/mePic-Asphodel-silhouette.png",
-    "../assets/mePic-Asphodel-1.jpg",
-    "../assets/mePic-Asphodel-2.jpg"
-  ]
-}
-
-const doPreload = (pics = "all") => {
-  const preloadImages = (arr = []) => {
-    arr.forEach((img)=>{
-      const newImage = new Image();
-      newImage.src = img;
-      window[img] = newImage;
-    })
-  }
-  if (pics === "all") {
-    for (let category in imgURLs) {
-      preloadImages(imgURLs[category])
-    }
-  } else {
-    preloadImages(imgURLs[pics])
-  }
-}
-
-const Preloader = () => {
-
-  useEffect(() => {
-    doPreload();
-  },[])
-
-  return (
-    <div className="preload">
-      {imgURLs.profilePic.map((img, k)=>{
-        return <img src={img} key={k} alt="" aria-hidden />
-      })}
-    </div>
-  )
-}
-
-export {Preloader as default, doPreload};
+export default doPreload;

@@ -22,16 +22,22 @@
   position: relative !important;
 }
 
-.mePicLayer2 {
-  background-image: url('../../assets/mePic-Asphodel-silhouette.png');
-}
-
 .mePicLayer3 {
-  background-image: url('../../assets/mePic-Asphodel-2.jpg');
+  .mePicLayerImg1 {
+    z-index: 0;
+  }
+  .mePicLayerImg2 {
+    z-index: 1;
+  }
 }
 
 .profilePicAlt .mePicLayer3 {
-  background-image: url('../../assets/mePic-Asphodel-1.jpg');
+  .mePicLayerImg1 {
+    z-index: 1;
+  }
+  .mePicLayerImg2 {
+    z-index: 0;
+  }
 }
 
 .faceSwitchIcon {

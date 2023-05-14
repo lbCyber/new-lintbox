@@ -45,40 +45,38 @@ const Work = () => {
     setWork(sortedObj);
   };
   return (
-    <section className="" id="work">
+    <section id="work">
       <div className="wrapper">
-        <div className="">
-          <h5 className="">Sort by:</h5>
-          <div className="">
-            <p className=""
+        <div>
+          <h5>Sort by:</h5>
+          <div>
+            <p
               onClick={() => sorter(1)}>Latest <span className={sort === 1 ? (order === -1 ? "ascSort" : "descSort") : null}></span>
             </p>
-            <p className=""
+            <p
               onClick={() => sorter(0)}>
               Alphabetically <span className={sort === 0 ? (order === 1 ? "ascSort" : "descSort") : null}></span>
             </p>
           </div>
         </div>
-        <div className="">
+        <div>
           {work.map((project, key) => {
             return (
-              <div className="" key={key}>
-                <h3 className="">Name: {project.title}</h3>
-                <img className=""
+              <div key={key}>
+                <h3>Name: {project.title}</h3>
+                <img
                   src={`./assets/${project.image}`}
-                  alt=""
-                />
-                <h4 className="">
+                  alt="" />
+                <h4>
                   Published: {`${months[project.published[1]]} ${project.published[2]}, ${project.published[0]}`}
                 </h4>
-                <div className="">
+                <div>
                   <ReactMarkdown
                     children={project.text}
                     linkTarget="_blank"
-                    parserOptions={{ commonmark: true }}
-                  />
+                    parserOptions={{ commonmark: true }} />
                 </div>
-                <div className="">
+                <div>
                   <ul>
                     {project.features.map((feature, key) => {
                       return <li key={key}>{features[feature]}</li>

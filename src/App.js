@@ -10,52 +10,49 @@ import Header from "./Components/HeaderTop";
 import common from "./Components/commonFunctions";
 
 function App() {
-
   const getPRM = () => {
-    return !window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
-  }
+    return !window.matchMedia("(prefers-reduced-motion: no-preference)")
+      .matches;
+  };
   const [lightMode, setLightMode] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [reduceMotion, setReduceMotion] = useState(getPRM);
 
-  useEffect(()=>{
-    const currPRMState = window.matchMedia('(prefers-reduced-motion: no-preference)')
+  useEffect(() => {
+    const currPRMState = window.matchMedia(
+      "(prefers-reduced-motion: no-preference)"
+    );
     const PRMListen = (e) => {
-      setReduceMotion(!e.matches)
-    }
-    currPRMState.addEventListener('change', PRMListen)
-    return() => {
-      currPRMState.removeEventListener('change', PRMListen)
-    }
-  }, [])
+      setReduceMotion(!e.matches);
+    };
+    currPRMState.addEventListener("change", PRMListen);
+    return () => {
+      currPRMState.removeEventListener("change", PRMListen);
+    };
+  }, []);
 
   return (
-    <>
-      <div className={
-        `MainApp
+    <div
+      className={`MainApp
           ${reduceMotion ? " reducedMotionNoOS" : ""}
           ${lightMode ? " lightMode" : ""}
         `}>
-        <Nav
-          setReduceMotion={setReduceMotion}
-          reduceMotion={reduceMotion}
-          lightMode={lightMode}
-          setLightMode={setLightMode}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          />
-        <main>
-          <Header
-            background={common.doBackgroundGen(lightMode)}
-          />
-          {/* <Intro />
+      <Nav
+        setReduceMotion={setReduceMotion}
+        reduceMotion={reduceMotion}
+        lightMode={lightMode}
+        setLightMode={setLightMode}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage} />
+      <main>
+        <Header background={common.doBackgroundGen(lightMode)} />
+        {/* <Intro />
           <Work />
           <Skills />
           <Contact /> */}
-        </main>
-        {/* <Footer /> */}
-      </div>
-    </>
+      </main>
+      {/* <Footer /> */}
+    </div>
   );
 }
 

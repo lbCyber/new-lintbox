@@ -14,11 +14,11 @@ const Skills = () => {
     ["wordpress", "Wordpress"],
   ];
   return (
-    <section className="" id="skills">
+    <section id="skills">
       <div className="wrapper">
-        <div className="">
-          <h5 className="">I am a creator</h5>
-          <p className="">
+        <div>
+          <h5>I am a creator</h5>
+          <p>
             I consider myself a life-long creator and a veteran in web development
             (though one who is constantly learning and improving).
           </p>
@@ -34,7 +34,7 @@ const Skills = () => {
             often work with the more essential Javascript libraries, including
             jQuery and React.js
           </p>
-          <h5 className="">I am a programmer</h5>
+          <h5>I am a programmer</h5>
           <p>
             My experience as a programmer began at an early age, when I would
             explore the inner workings of DOS and write small games using chains
@@ -45,7 +45,7 @@ const Skills = () => {
             my own as a self-taught coder with experience in languages including
             HTML, CSS, Javascript, PHP, Python, and C.
           </p>
-          <h5 className="">I am an artist</h5>
+          <h5>I am an artist</h5>
           <p>
             On the design side of web development, as the son of an art teacher, I
             had always possessed a certain ability for visual arts and layout.
@@ -56,15 +56,14 @@ const Skills = () => {
             ways of developing exciting web sites and applications.
           </p>
         </div>
-        <div className="">
+        <div>
           {skillList.map((skill, key) => {
             return (
               <img
                 className="devIcon"
                 src={`./assets/devicons/${skill[0]}.svg`}
                 alt={skill[1]}
-                key={key}
-              />
+                key={key} />
             );
           })}
         </div>

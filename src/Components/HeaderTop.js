@@ -50,8 +50,7 @@ const Header = (background) => {
                 profilePic ? "" : " profilePicAlt"
               }`}
               onClick={profileAction}
-              onMouseLeave={() => setClickedActive(false)}
-            >
+              onMouseLeave={() => setClickedActive(false)}>
               <img
                 className="mePicLayer1"
                 src={
@@ -59,8 +58,7 @@ const Header = (background) => {
                     ? "./assets/mePic-Asphodel-1.jpg"
                     : "./assets/mePic-Asphodel-2.jpg"
                 }
-                alt="It's me, Paul. Hello!"
-              />
+                alt="It's me, Paul. Hello!" />
               <div className="mePicLayerAnim mePicLayer2" aria-hidden="true">
                 <img src="./assets/mePic-Asphodel-silhouette.png" alt="" />
               </div>
@@ -68,20 +66,17 @@ const Header = (background) => {
                 <img
                   className="mePicLayerImg1"
                   src="./assets/mePic-Asphodel-1.jpg"
-                  alt=""
-                />
+                  alt="" />
                 <img
                   className="mePicLayerImg2"
                   src="./assets/mePic-Asphodel-2.jpg"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div
                 className={`faceSwitchIcon${
                   clickedActive ? " clickedActive" : ""
                 }`}
-                aria-hidden="true"
-              >
+                aria-hidden="true">
                 <FontAwesomeIcon icon={faCamera} />
                 <span className="photoSlashPaint">/</span>
                 <FontAwesomeIcon icon={faPaintbrush} />
@@ -101,35 +96,20 @@ const Header = (background) => {
             soon for more!
           </p>
           <h5 className="resumeHeadingTop">
-            In the meantime, you can find me at LinkedIn{" "}
-            <a
+            In the meantime, you can find me at LinkedIn <a
               href="https://www.linkedin.com/in/procc/"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
-            !
+              rel="noopener noreferrer" >here</a>!
           </h5>
           <h5 className="resumeHeadingMiddle">
-            Or you can cut right to it and see my resume{" "}
-            <a
+            Or you can cut right to it and see my resume <a
               href="https://lintbox.com/procca-resume-general.pdf"
               target="_blank"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
-            !
+              rel="noopener noreferrer">here</a>!
           </h5>
           <h5 className="resumeHeadingBottom">
-            Or browse the old site{" "}
-            <a
+            Or browse the old site <a
               href="https://lintbox.com/oldindex.html"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
-            !
+              rel="noopener noreferrer">here</a>!
           </h5>
         </div>
       </div>

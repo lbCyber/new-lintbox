@@ -62,7 +62,7 @@ h6 {
   background-image: linear-gradient(#000 10%, transparent 33% 67%, #000 90%);
 }
 
-.introSection {
+.sectionBackground {
   background-image:
     linear-gradient(75deg, darken($darkGrey, 17%) 0% 27.85%, transparent 28% 100%),
     linear-gradient(115deg, darken($darkSlate, 21%) 0% 29.85%, transparent 30% 100%),
@@ -116,7 +116,7 @@ h6 {
       linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
     }
 
-  .introSection {
+  .sectionBackground {
     background-image:
       linear-gradient(75deg, lighten($faintGrey, 17%) 0% 27.85%,
       transparent 28% 100%),

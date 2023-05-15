@@ -1,13 +1,9 @@
 import "./Styles/main.scss";
 import { useState, useEffect } from "react";
-import Nav from "./Components/Nav";
-import Header from "./Components/HeaderTop";
-// import Intro from "./Components/Intro";
-// import Work from "./Components/Work";
-// import Skills from "./Components/Skills";
-// import Contact from "./Components/Contact";
-// import Footer from "./Components/Footer";
 import common from "./Components/commonFunctions";
+import Header from "./Components/Header";
+import Intro from "./Components/Intro";
+import Skills from "./Components/Skills";
 
 function App() {
   const getPRM = () => {
@@ -19,9 +15,7 @@ function App() {
   const [reduceMotion, setReduceMotion] = useState(getPRM);
 
   useEffect(() => {
-    const currPRMState = window.matchMedia(
-      "(prefers-reduced-motion: no-preference)"
-    );
+    const currPRMState = window.matchMedia("(prefers-reduced-motion: no-preference)");
     const PRMListen = (e) => {
       setReduceMotion(!e.matches);
     };
@@ -37,21 +31,11 @@ function App() {
           ${reduceMotion ? " reducedMotionNoOS" : ""}
           ${lightMode ? " lightMode" : ""}
         `}>
-      <Nav
-        setReduceMotion={setReduceMotion}
-        reduceMotion={reduceMotion}
-        lightMode={lightMode}
-        setLightMode={setLightMode}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage} />
       <main>
         <Header background={common.doBackgroundGen(lightMode)} />
-        {/* <Intro />
-          <Work />
-          <Skills />
-          <Contact /> */}
+        <Intro background={common.doBackgroundGen(lightMode)} />
+        <Skills background={common.doBackgroundGen(lightMode)} />
       </main>
-      {/* <Footer /> */}
     </div>
   );
 }

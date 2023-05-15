@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faPaintbrush } from "@fortawesome/free-solid-svg-icons";
 import doPreload from "./preloader";
 
-const Header = (background) => {
+const Header = ({background}) => {
   const [profilePic, setProfilePic] = useState(true);
   const [profileToggle, setProfileToggle] = useState(false);
   const [animReady, setAnimReady] = useState(false);
@@ -40,7 +40,7 @@ const Header = (background) => {
   }, [profileToggle, firstLoad, profileLoading]);
 
   return (
-    <header className="introSection" style={background}>
+    <header className="headerSection sectionBackground" style={background}>
       <div className="wrapper">
         <div className="headerContainer">
           <div className="centerHeaderItems">

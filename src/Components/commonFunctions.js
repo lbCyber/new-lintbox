@@ -12,13 +12,13 @@ const common = {
 
     let colour1, colour2, colour3
     if (lightMode) {
-      colour1 = "#D8DEE6";
-      colour2 = "#D1CCD8";
-      colour3 = "#C8D7EB";
+      colour1 = "#D8DEE6"
+      colour2 = "#D1CCD8"
+      colour3 = "#C8D7EB"
     } else {
-      colour1 = "#111112";
-      colour2 = "#1A1B22";
-      colour3 = "#2B333C";
+      colour1 = "#111112"
+      colour2 = "#1A1B22"
+      colour3 = "#2B333C"
     }
 
     return {backgroundImage: `linear-gradient(${rot}deg, ${colour1} 0% ${pie1}%, transparent ${pie1}% 100%), linear-gradient(${rot + 40 * dir}deg, ${colour2} 0% ${pie2}%, transparent ${pie2}% 100%), linear-gradient(${rot + 80 * dir}deg, ${colour3} 0% ${pie3}%, transparent ${pie3}% 100%)`}

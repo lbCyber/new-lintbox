@@ -1,63 +1,48 @@
-const Skills = () => {
+import {useState, useEffect} from "react";
+
+const Skills = ({background}) => {
+
   const skillList = [
     ["css", "CSS"],
     ["git", "Git/GitHub"],
     ["html5", "HTML5"],
     ["javascript", "JavaScript"],
-    ["jquery", "jQuery"],
+    ["kotlin", "Kotlin"],
+    ["mongodb", "MongoDB"],
     ["mysql", "MySQL"],
     ["node", "node"],
-    ["php", "PHP"],
     ["python", "Python"],
     ["react", "React"],
+    ["rubyonrails", "Ruby On Rails"],
     ["sass", "SASS/SCSS"],
+    ["typescript", "TypeScript"],
     ["wordpress", "Wordpress"],
+    ["yaml", "YAML"],
   ];
+
+  const peeks = [
+    ['blank', 'imgsrc', 'https://paulroc.ca'],
+    ['hallownest', 'imgsrc', 'https://codepen.io/lbcyber/pen/BaLzpJY'],
+    ['axo', 'imgsrc', 'https://codepen.io/lbcyber/pen/gOwaZzp'],
+    ['psx', 'imgsrc', 'https://codepen.io/lbcyber/full/ExbmJmp'],
+  ]
+
+  const randPeek = Math.floor(Math.random() * 3) + 1
+  const [getPeek, setPeek] = useState(peeks[randPeek])
+
   return (
-    <section id="skills">
+    <section id="skills" className="skillsSection sectionBackground" style={background}>
       <div className="wrapper">
         <div>
-          <h5>I am a creator</h5>
-          <p>
-            I consider myself a life-long creator and a veteran in web development
-            (though one who is constantly learning and improving).
-          </p>
-          <p>
-            My philosophy in design has always been to challenge myself and invent
-            new and ambitious ways of developing content. In web development in
-            particular, I pride myself in avoiding prefabs and third-party
-            libraries in my own personal work; if it's something I can learn to do
-            myself, that's what I'm going to do.
-          </p>
-          <p>
-            That isn't to say I don't have experience with libraries, though! I
-            often work with the more essential Javascript libraries, including
-            jQuery and React.js
-          </p>
-          <h5>I am a programmer</h5>
-          <p>
-            My experience as a programmer began at an early age, when I would
-            explore the inner workings of DOS and write small games using chains
-            of batch scripts.
-          </p>
-          <p>
-            Since then, I have expanded on and improved my skills and abilities on
-            my own as a self-taught coder with experience in languages including
-            HTML, CSS, Javascript, PHP, Python, and C.
-          </p>
-          <h5>I am an artist</h5>
-          <p>
-            On the design side of web development, as the son of an art teacher, I
-            had always possessed a certain ability for visual arts and layout.
-            Throughout my life I have constantly worked to improve my aptitude in
-            digital graphics and animation, as well as my instincts in colours and
-            form. With a formal education in print design and layout, I've used my
-            collection of abilities to always come up with new and interesting
-            ways of developing exciting web sites and applications.
-          </p>
+          <blockquote>
+            <p>Paul's technical expertise shines through their work - they onboarded in just a few weeks and immediately began contributing to the overall team output. They were autonomous in all they did, and both challenged and improved our processes. This directly contributed to the team hitting 99% of their goal in the 1st half of 2022.</p>
+            <p>Simply put, Paul leaves things better than they found them. They are both great and passionate at their craft - Paul is reliable and helped us ship some of our most challenging experiments and features. They also helped onboard full-time developers onto the crew, which accelerated the time to impact for our newer team members.</p>
+            <p>Paul was a beacon of light, radiating energy and positivity in everything they did for our crew, and always with a smile. Any team would be lucky to have them!</p>
+            <p className="quoteAttr">Carlos Lazo, Staff Software Engineer at Shopify</p>
+          </blockquote>
         </div>
         <div>
-          {skillList.map((skill, key) => {
+          {/*{skillList.map((skill, key) => {
             return (
               <img
                 className="devIcon"
@@ -65,8 +50,12 @@ const Skills = () => {
                 alt={skill[1]}
                 key={key} />
             );
-          })}
+          })}*/}
         </div>
+        <aside>
+          <p>Check out a codepen!</p>
+          <a href={getPeek[2]} target="_blank" rel="noopener noreferrer">{getPeek[0]}</a>
+        </aside>
       </div>
     </section>
   )

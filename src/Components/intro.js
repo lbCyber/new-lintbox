@@ -1,50 +1,45 @@
-const Intro = () => {
+import {useState} from "react";
+
+const Intro = ({background}) => {
+
+  const randNum = Math.floor(Math.random() * 4)
+
+  const randGame = [
+    'Dark Souls',
+    'Elden Ring',
+    'Bloodborne',
+    'Darkest Dungeon'
+  ]
+
+  const [getGame, setGame] = useState(randGame[randNum])
+
   return (
-    <section id="intro">
+    <section id="intro" className="aboutSection sectionBackground" style={background}>
       <div className="wrapper">
-        <h5>Hey there!</h5>
-        <p>
-          I'm a multi-skilled front-end developer and writer based in Toronto,
-          Canada.
-        </p>
-        <p>
-          I'm always refining my skills as a creator and as both a front-end and
-          back-end developer. Below you can see just a small glimpse of the work
-          I've done as a front-end developer, applying my past skills in print
-          design, graphic design, animation, writing, and photography!
-        </p>
-        <h5>What's your story?</h5>
-        <p>
-          Born and raised in Niagara Falls, I eventually found myself in love with
-          the city of Toronto, studying at prestigious schools including <a href="http://utoronto.ca" target="_blank" rel="noopener noreferrer"> University of Toronto</a>, <a href="http://humber.ca" target="_blank" rel="noopener noreferrer">Humber College</a>, and <a href="https://junocollege.com" target="_blank" rel="noopener noreferrer">Juno</a> (formerly <a href="https://hackeryou.com" target="_blank" rel="noopener noreferrer">HackerYou</a>).
-        </p>
-        <p>
-          I have years of experience freelancing as a web developer for small
-          businesses and non-profits, as well as a copy editor and writer, trading
-          largely with local publications.
-        </p>
-        <h5>Okay, but what else?</h5>
-        <p>
-          Having graduated from Juno's immersive front-end development program, I
-          have become a highly-skilled and dedicated front-end developer, with a
-          deeply-rooted love for what I do.
-        </p>
-        <p>
-          I have an indomitable passion for giving back to the LGBTQ+ community,
-          of which I owe so much, and love working with people and working toward
-          making the world a better place through both charity foundations and
-          advocacy.
-        </p>
-        <p>
-          Most of all, I am dedicated to growing as a person and becoming better
-          every day, however I can. I have a genuine love of all people and will
-          always go out of my way to provide whatever support I can for those in
-          need.
-        </p>
-        <h6>(Also I'm pretty good at Dark Souls)</h6>
-        <p>
-          So if you have anything you'd like to talk about, please <a href="mailto:paul@lintbox.com">contact me!</a>
-        </p>
+        <div>
+          <p>I've worked for:</p>
+          <ul>
+            <li>Deloitte Digital</li>
+            <li>TWG</li>
+            <li>Shopify</li>
+            <li>Juno College</li>
+          </ul>
+        </div>
+        <div>
+          <h5>About</h5>
+          <p>
+            I'm a web developer and software engineer based in Toronto, Ontario with +5 years experience developing fully-realized top-down web solutions for clients using Javascript, React, HTML/CSS, Ruby-on-Rails and Wordpress architectures. My goals are always to learn, improve, and employ modern accessibility standards to build a better web for all.
+          </p>
+          <p>
+            I'm also an LGBTQ+ man with an indomitable passion for fostering equitable and supportive workspaces and environments for all, having collaborated with multiple Diversity, Equity and Inclusion committees to ensure access and safety for all visible and invisible minority groups.
+          </p>
+          <p>
+            When I'm not coding, you'll find me reading or watching the latest horror novels and movies, gushing about Godzilla facts<span className="aside">(trust me I have so many)</span>, or playing <span className="strikeout">fun new video games.</span> <span className="interrupt">mostly {getGame}</span>
+          </p>
+          <p>
+            I also manage the Laura S. Rocca fund, a charity that has raised over $125,000 for cancer research at the <a href="https://www.uhn.ca/PrincessMargaret" target="_blank" rel="noopener noreferrer">Princess Margaret Hospital</a> in Toronto.
+          </p>
+        </div>
       </div>
     </section>
   )

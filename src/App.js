@@ -33,7 +33,7 @@ function App() {
         `}>
       <main>
         <Header background={common.doBackgroundGen(lightMode)} />
-        <Intro background={common.doBackgroundGen(lightMode)} />
+        <Intro background={common.doBackgroundGen(lightMode)} lightMode={lightMode}/>
         <Skills background={common.doBackgroundGen(lightMode)} />
       </main>
     </div>

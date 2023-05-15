@@ -21,10 +21,26 @@ const Skills = ({background}) => {
   ];
 
   const peeks = [
-    ['blank', 'imgsrc', 'https://paulroc.ca'],
-    ['hallownest', 'imgsrc', 'https://codepen.io/lbcyber/pen/BaLzpJY'],
-    ['axo', 'imgsrc', 'https://codepen.io/lbcyber/pen/gOwaZzp'],
-    ['psx', 'imgsrc', 'https://codepen.io/lbcyber/full/ExbmJmp'],
+    [
+      "blank",
+      "./assets/codepen/cp-hr.jpg",
+      "https://paulroc.ca"
+    ],
+    [
+      "An animation I made in CodePen!",
+      "./assets/codepen/cp-hr.jpg",
+      "https://codepen.io/lbcyber/pen/BaLzpJY"
+    ],
+    [
+      "A small vector animation I made in CodePen!",
+      "./assets/codepen/cp-axo.jpg",
+      "https://codepen.io/lbcyber/pen/gOwaZzp"
+    ],
+    [
+      "The original Playstation startup screen I recreated in CodePen!",
+      "./assets/codepen/cp-ps.jpg",
+      "https://codepen.io/lbcyber/full/ExbmJmp"
+    ],
   ]
 
   const randPeek = Math.floor(Math.random() * 3) + 1
@@ -52,9 +68,13 @@ const Skills = ({background}) => {
             );
           })}*/}
         </div>
-        <aside>
+        <aside className="codePenAside">
           <p>Check out a codepen!</p>
-          <a href={getPeek[2]} target="_blank" rel="noopener noreferrer">{getPeek[0]}</a>
+          <a href={getPeek[2]} target="_blank" rel="noopener noreferrer">
+            <div className="codePenBox">
+              <img src={getPeek[1]} alt={getPeek[0]}/>
+            </div>
+          </a>
         </aside>
       </div>
     </section>

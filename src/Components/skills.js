@@ -1,24 +1,7 @@
 import {useState, useEffect} from "react";
+import DevIcons from "./DevIcons";
 
-const Skills = ({background}) => {
-
-  const skillList = [
-    ["css", "CSS"],
-    ["git", "Git/GitHub"],
-    ["html5", "HTML5"],
-    ["javascript", "JavaScript"],
-    ["kotlin", "Kotlin"],
-    ["mongodb", "MongoDB"],
-    ["mysql", "MySQL"],
-    ["node", "node"],
-    ["python", "Python"],
-    ["react", "React"],
-    ["rubyonrails", "Ruby On Rails"],
-    ["sass", "SASS/SCSS"],
-    ["typescript", "TypeScript"],
-    ["wordpress", "Wordpress"],
-    ["yaml", "YAML"],
-  ];
+const Skills = ({background, lightMode}) => {
 
   const peeks = [
     [
@@ -57,16 +40,8 @@ const Skills = ({background}) => {
             <p className="quoteAttr">Carlos Lazo, Staff Software Engineer at Shopify</p>
           </blockquote>
         </div>
-        <div>
-          {/*{skillList.map((skill, key) => {
-            return (
-              <img
-                className="devIcon"
-                src={`./assets/devicons/${skill[0]}.svg`}
-                alt={skill[1]}
-                key={key} />
-            );
-          })}*/}
+        <div className="devIconsContainer">
+          <DevIcons />
         </div>
         <aside className="codePenAside">
           <p>Check out a codepen!</p>

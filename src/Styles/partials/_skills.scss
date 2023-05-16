@@ -11,3 +11,30 @@
   border-radius: 5px;
   overflow: hidden;
 }
+
+.devIconsContainer {
+  width: 1025px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.devIcons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  margin: 10px 0;
+  text-align: center;
+  p {
+    font-weight: 700;
+    margin: 10px 10px 0;
+  }
+  svg {
+    width: 80px;
+    fill: #9c97c8;
+  }
+}

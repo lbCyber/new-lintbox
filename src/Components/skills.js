@@ -1,7 +1,7 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import DevIcons from "./DevIcons";
 
-const Skills = ({background, lightMode}) => {
+const Skills = ({background}) => {
 
   const peeks = [
     [

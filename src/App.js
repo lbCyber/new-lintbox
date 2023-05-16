@@ -4,6 +4,7 @@ import common from "./Components/commonFunctions";
 import Header from "./Components/Header";
 import Intro from "./Components/Intro";
 import Skills from "./Components/Skills";
+import Contact from "./Components/Contact";
 
 function App() {
   const getPRM = () => {
@@ -35,6 +36,7 @@ function App() {
         <Header background={common.doBackgroundGen(lightMode)} />
         <Intro background={common.doBackgroundGen(lightMode)} lightMode={lightMode} />
         <Skills background={common.doBackgroundGen(lightMode)} />
+        <Contact background={common.doBackgroundGen(lightMode)} />
       </main>
     </div>
   );

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faPaintbrush } from "@fortawesome/free-solid-svg-icons";
-import doPreload from "./preloader";
+import doPreload from "./modules/preloader";
 
 const Header = ({background}) => {
   const [profilePic, setProfilePic] = useState(true);

@@ -2,9 +2,9 @@ const doPreload = async (imgObj,setimgState) => {
   // ONLY USED IN NICHE CASES
   const imgURLs = {
     profilePic: [
-      "../assets/mePic-Asphodel-silhouette.png",
-      "../assets/mePic-Asphodel-1.jpg",
-      "../assets/mePic-Asphodel-2.jpg",
+      "../../assets/mePic-Asphodel-silhouette.png",
+      "../../assets/mePic-Asphodel-1.jpg",
+      "../../assets/mePic-Asphodel-2.jpg",
     ],
   };
   const promises = await imgURLs[imgObj].map((src) => {

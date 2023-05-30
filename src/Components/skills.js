@@ -1,5 +1,5 @@
 import {useState} from "react";
-import DevIcons from "./DevIcons";
+import DevIcons from "./modules/DevIcons";
 
 const Skills = ({background}) => {
 

@@ -1,6 +1,7 @@
 import {useState} from "react";
+import Companies from "./modules/Companies";
 
-const Intro = ({background, lightMode}) => {
+const Intro = ({background, lightMode, reduceMotion}) => {
 
   const randNum = Math.floor(Math.random() * 4)
 
@@ -11,47 +12,14 @@ const Intro = ({background, lightMode}) => {
     'Darkest Dungeon'
   ]
 
-  const companies = [
-    [
-      "Deloitte Digital",
-      "./assets/companies/deloittedigital.png",
-      "./assets/companies/deloittedigital-l.png"
-    ],
-    [
-      "TWG: The Working Group",
-      "./assets/companies/twg.png",
-      "./assets/companies/twg.png"
-    ],
-    [
-      "Shopify",
-      "./assets/companies/shopify.png",
-      "./assets/companies/shopify-l.png"
-    ],
-    [
-      "Juno College of Technology",
-      "./assets/companies/junocollege.png",
-      "./assets/companies/junocollege-l.png"
-    ]
-  ]
-
   const [getGame, setGame] = useState(randGame[randNum])
 
   return (
     <section id="intro" className="aboutSection sectionBackground" style={background}>
+      <div className="companiesContainer">
+        <Companies lightMode={lightMode} reduceMotion={reduceMotion}/>
+      </div>
       <div className="wrapper">
-        <div>
-          <p>I've worked for:</p>
-          <ul className="companiesList">
-            {companies.map((i,k)=>{
-              const imgURL = lightMode ? i[2] : i[1]
-              return (
-                <li className="companyLogoItem">
-                  <img className="companyLogo" src={imgURL} alt={i[0]} key={k} />
-                </li>
-              )
-            })}
-          </ul>
-        </div>
         <div>
           <h5>About</h5>
           <p>

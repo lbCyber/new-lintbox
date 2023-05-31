@@ -46,18 +46,16 @@ const Header = ({background}) => {
           <div className="centerHeaderItems">
             <div className="backgroundStyle"></div>
             <div
-              className={`profilePic${profileToggle ? " activeAnim" : ""} ${
-                profilePic ? "" : " profilePicAlt"
-              }`}
+              className={`profilePic
+                ${profileToggle ? " activeAnim" : ""}
+                ${profilePic ? "" : " profilePicAlt"}`}
               onClick={profileAction}
               onMouseLeave={() => setClickedActive(false)}>
               <img
                 className="mePicLayer1"
-                src={
-                  profilePic
-                    ? "./assets/mePic-Asphodel-1.jpg"
-                    : "./assets/mePic-Asphodel-2.jpg"
-                }
+                src={ profilePic ?
+                  "./assets/mePic-Asphodel-1.jpg" :
+                  "./assets/mePic-Asphodel-2.jpg"}
                 alt="It's me, Paul. Hello!" />
               <div className="mePicLayerAnim mePicLayer2" aria-hidden="true">
                 <img src="./assets/mePic-Asphodel-silhouette.png" alt="" />
@@ -73,9 +71,8 @@ const Header = ({background}) => {
                   alt="" />
               </div>
               <div
-                className={`faceSwitchIcon${
-                  clickedActive ? " clickedActive" : ""
-                }`}
+                className={`faceSwitchIcon
+                  ${clickedActive ? " clickedActive" : ""}`}
                 aria-hidden="true">
                 <FontAwesomeIcon icon={faCamera} />
                 <span className="photoSlashPaint">/</span>

@@ -30,13 +30,18 @@ function App() {
     <div
       className={`MainApp
           ${reduceMotion ? " reducedMotionNoOS" : ""}
-          ${lightMode ? " lightMode" : ""}
-        `}>
+          ${lightMode ? " lightMode" : ""}`}>
       <main>
-        <Header background={common.doBackgroundGen(lightMode)} />
-        <Intro background={common.doBackgroundGen(lightMode)} lightMode={lightMode} reduceMotion={reduceMotion} />
-        <Skills background={common.doBackgroundGen(lightMode)} />
-        <Contact background={common.doBackgroundGen(lightMode)} />
+        <Header
+          background={common.doBackgroundGen(lightMode)} />
+        <Intro
+          background={common.doBackgroundGen(lightMode)}
+          lightMode={lightMode}
+          reduceMotion={reduceMotion} />
+        <Skills
+          background={common.doBackgroundGen(lightMode)} />
+        <Contact
+          background={common.doBackgroundGen(lightMode)} />
       </main>
     </div>
   );

@@ -16,31 +16,25 @@ const Contact = ({background}) => {
   return (
     <section id="contact" className="contactSection sectionBackground" style={background}>
       <form onSubmit={handleFormSubmit}>
-      <label htmlFor="email">
-        Email Address
-      </label>
+      <label htmlFor="email">Email Address</label>
       <input
         id="email"
         type="email"
-        name="email"
-      />
+        name="email" />
       <ValidationError
         prefix="Email"
         field="email"
-        errors={formState.errors}
-      />
+        errors={formState.errors} />
       <textarea
         id="message"
-        name="message"
-      />
+        name="message" />
       <ValidationError
         prefix="Message"
         field="message"
-        errors={formState.errors}
-      />
-      <button type="submit" disabled={formState.submitting}>
-        Submit
-      </button>
+        errors={formState.errors} />
+      <button
+        type="submit"
+        disabled={formState.submitting}>Submit</button>
     </form>
   </section>
   );

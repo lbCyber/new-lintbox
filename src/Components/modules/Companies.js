@@ -91,9 +91,22 @@ const Companies = ({ lightMode, reduceMotion }) => {
           {companies.map((i, k) => {
             const imgURL = lightMode ? i[2] : i[1];
             return (
-              <li className={`companyLogoItem${shineReset ? " shineReset" : ""}${cardTextVisible[k] ? " cardSlideDown" : ""}`} key={k} style={{transform: companyStyleBox[k]}} onMouseEnter={()=>cardTextSlide(k,true)} onMouseLeave={()=>cardTextSlide(k,false)}>
-                <div className="shine" style={{opacity: companyStyleShine, backgroundPosition: `${parseInt(offsetX - 25) * 5}px ${parseInt(offsetY - 50) * 3.25 * (k + 1)}px`}}></div>
-                <img className="companyLogo" src={imgURL} alt={i[0]} />
+              <li
+                className={`companyLogoItem
+                  ${shineReset ? " shineReset" : ""}
+                  ${cardTextVisible[k] ? " cardSlideDown" : ""}`}
+                key={k}
+                style={{transform: companyStyleBox[k]}}
+                onMouseEnter={()=>cardTextSlide(k,true)}
+                onMouseLeave={()=>cardTextSlide(k,false)}>
+                <div
+                  className="shine"
+                  style={{
+                    opacity: companyStyleShine,
+                    backgroundPosition: `${parseInt(offsetX - 25) * 5}px ${parseInt(offsetY - 50) * 3.25 * (k + 1)}px`}}></div>
+                <img className="companyLogo"
+                  src={imgURL}
+                  alt={i[0]} />
                 <p className="companyCardText">{i[0]}</p>
               </li>
             );

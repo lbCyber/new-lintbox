@@ -74,8 +74,11 @@ const DevIcons = () => {
         <div className="devIcons" key={k}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
             {i.circle ?
-              <circle cx={i.circle[0]} cy={i.circle[1]} r={i.circle[2]}></circle>
-              : null}
+              <circle
+                cx={i.circle[0]}
+                cy={i.circle[1]}
+                r={i.circle[2]}></circle> :
+              null}
             <path d={i.d}></path>
           </svg>
           <p>{i.name}</p>

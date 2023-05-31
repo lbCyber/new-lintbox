@@ -126,6 +126,7 @@ section {
   position: relative;
   min-height: 100vh;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .sectionTitle {

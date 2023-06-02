@@ -37,7 +37,6 @@ const Companies = ({ lightMode, reduceMotion }) => {
   const [ymid, setymid] = useState(0)
   const [shineOp, setshineOp] = useState(0)
   const [shineReset, setShineReset] = useState(true)
-  const [cardTextVisible, setCardTextVisible] = useState([false,false,false,false])
 
   const logosRef = useRef();
 
@@ -60,14 +59,6 @@ const Companies = ({ lightMode, reduceMotion }) => {
     setCompanyStyleBox(dummyBoxArray);
     setCompanyStyleShine(0);
   };
-
-  const cardTextSlide = (i,d) => {
-    if (window.innerWidth > 1024) {
-      const array = cardTextVisible
-      array[i] = d
-      setCardTextVisible(array)
-    }
-  }
 
   useEffect(()=>{
     setCompanyStyleBox([
@@ -93,21 +84,17 @@ const Companies = ({ lightMode, reduceMotion }) => {
             return (
               <li
                 className={`companyLogoItem
-                  ${shineReset ? " shineReset" : ""}
-                  ${cardTextVisible[k] ? " cardSlideDown" : ""}`}
+                  ${shineReset ? " shineReset" : ""}`}
                 key={k}
-                style={{transform: companyStyleBox[k]}}
-                onMouseEnter={()=>cardTextSlide(k,true)}
-                onMouseLeave={()=>cardTextSlide(k,false)}>
+                style={{transform: companyStyleBox[k]}}>
                 <div
                   className="shine"
                   style={{
                     opacity: companyStyleShine,
-                    backgroundPosition: `${parseInt(offsetX - 25) * 5}px ${parseInt(offsetY - 50) * 3.25 * (k + 1)}px`}}></div>
+                    backgroundPosition: `${parseInt(offsetX - 25) * 5}px ${parseInt(offsetY + 700) * 3.25 * (k + 1)}px`}}></div>
                 <img className="companyLogo"
                   src={imgURL}
                   alt={i[0]} />
-                <p className="companyCardText">{i[0]}</p>
               </li>
             );
           })}

@@ -1,7 +1,8 @@
 import {useState} from "react";
 import DevIcons from "./modules/DevIcons";
+import Companies from "./modules/Companies";
 
-const Skills = ({background}) => {
+const Skills = ({background, lightMode, reduceMotion}) => {
 
   const peeks = [
     [
@@ -32,25 +33,27 @@ const Skills = ({background}) => {
   return (
     <section id="skills" className="skillsSection sectionBackground" style={background}>
       <div className="wrapper">
-        <div>
-          <blockquote>
-            <p>Paul's technical expertise shines through their work - they onboarded in just a few weeks and immediately began contributing to the overall team output. They were autonomous in all they did, and both challenged and improved our processes. This directly contributed to the team hitting 99% of their goal in the 1st half of 2022.</p>
-            <p>Simply put, Paul leaves things better than they found them. They are both great and passionate at their craft - Paul is reliable and helped us ship some of our most challenging experiments and features. They also helped onboard full-time developers onto the crew, which accelerated the time to impact for our newer team members.</p>
-            <p>Paul was a beacon of light, radiating energy and positivity in everything they did for our crew, and always with a smile. Any team would be lucky to have them!</p>
-            <p className="quoteAttr">Carlos Lazo, Staff Software Engineer at Shopify</p>
-          </blockquote>
-        </div>
-        <div className="devIconsContainer">
-          <DevIcons />
-        </div>
-        <aside className="codePenAside">
-          <p>Check out a codepen!</p>
-          <a href={getPeek[2]} target="_blank" rel="noopener noreferrer">
-            <div className="codePenBox">
-              <img src={getPeek[1]} alt={getPeek[0]}/>
+        <div className="skillsContainer">
+          <div className="skillsDesc">
+            <p>
+              I'm a web developer and software engineer with +5 years experience developing fully-realized top-down web solutions for clients using Javascript, React, HTML/CSS, Ruby-on-Rails and Wordpress architectures. My goals are always to learn, improve, and employ modern accessibility standards to build a better web for all!
+            </p>
+            <div className="companiesContainer">
+              <Companies lightMode={lightMode} reduceMotion={reduceMotion}/>
             </div>
-          </a>
-        </aside>
+            <div className="devIconsContainer">
+              <DevIcons />
+            </div>
+          </div>
+          <aside className="codePenAside">
+            <p>Check out a codepen!</p>
+            <a href={getPeek[2]} target="_blank" rel="noopener noreferrer">
+              <div className="codePenBox">
+                <img src={getPeek[1]} alt={getPeek[0]}/>
+              </div>
+            </a>
+          </aside>
+        </div>
       </div>
     </section>
   )

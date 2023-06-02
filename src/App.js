@@ -34,12 +34,12 @@ function App() {
       <main>
         <Header
           background={common.doBackgroundGen(lightMode)} />
-        <Intro
-          background={common.doBackgroundGen(lightMode)}
-          lightMode={lightMode}
-          reduceMotion={reduceMotion} />
         <Skills
-          background={common.doBackgroundGen(lightMode)} />
+        background={common.doBackgroundGen(lightMode)}
+        lightMode={lightMode}
+        reduceMotion={reduceMotion} />
+        <Intro
+          background={common.doBackgroundGen(lightMode)}/>
         <Contact
           background={common.doBackgroundGen(lightMode)} />
       </main>

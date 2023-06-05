@@ -1,10 +1,13 @@
 @media screen and (max-width:1024px) {
   .wrapper {
-    max-width: 768px;
+    width: 92.5%;
   }
 
   .headerContainer {
     min-height: 360px;
+    h3 {
+      width: 750px;
+    }
   }
 
   .centerHeaderItems {
@@ -14,10 +17,6 @@
 
   .faceSwitchIcon {
     height: 240px;
-  }
-
-  .headerContainer h3 {
-    width: unset;
   }
 
   .headerText {

@@ -103,37 +103,10 @@ const Skills = ({background, lightMode, reduceMotion}) => {
       <div className="wrapper">
         <div className="skillsContainer">
           <div className="skillsDesc">
-            <p>
+            <h4>What I bring:</h4>
+            <p className="skillsText">
               I'm a web developer and software engineer with +5 years experience developing fully-realized top-down web solutions for clients using Javascript, React, HTML/CSS, Ruby-on-Rails and Wordpress architectures. My goals are always to learn, improve, and employ modern accessibility standards to build a better web for all!
             </p>
-            <div className="companiesContainer">
-              <h6>I've worked for:</h6>
-              <ul className="companiesList">
-                {companies.map((i, k) => {
-                  const imgURL = lightMode ? i[2] : i[1];
-                  return (
-                    <li
-                      className={`companyLogoItem
-                        ${shineReset ? " shineReset" : ""}`}
-                      key={k}
-                      style={{transform: companyStyleBox[k]}}>
-                      <div
-                        className="shine"
-                        style={{
-                          opacity: companyStyleShine,
-                          backgroundPosition: `${parseInt(offsetX - 25) * 5}px ${parseInt(offsetY + 700) * 3.25 * (k + 1)}px`}}></div>
-                      <img className="companyLogo"
-                        src={imgURL}
-                        alt={i[0]} />
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-            <div className="devIconsContainer">
-              <h5>My toolkit:</h5>
-              <DevIcons />
-            </div>
           </div>
           <aside className="codePenAside">
             <h5>Check out a codepen!</h5>
@@ -143,6 +116,36 @@ const Skills = ({background, lightMode, reduceMotion}) => {
               </div>
             </a>
           </aside>
+        </div>
+        <div className="devIconsContainer">
+          <h4>My toolkit:</h4>
+          <div className="devIconsBox">
+            <DevIcons />
+          </div>
+        </div>
+        <div className="companiesContainer">
+          <h4>I've worked with:</h4>
+          <ul className="companiesList">
+            {companies.map((i, k) => {
+              const imgURL = lightMode ? i[2] : i[1];
+              return (
+                <li
+                  className={`companyLogoItem
+                    ${shineReset ? " shineReset" : ""}`}
+                  key={k}
+                  style={{transform: companyStyleBox[k]}}>
+                  <div
+                    className="shine"
+                    style={{
+                      opacity: companyStyleShine,
+                      backgroundPosition: `${parseInt(offsetX - 25) * 5}px ${parseInt(offsetY + 700) * 3.25 * (k + 1)}px`}}></div>
+                  <img className="companyLogo"
+                    src={imgURL}
+                    alt={i[0]} />
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </section>

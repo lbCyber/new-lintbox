@@ -1,9 +1,14 @@
 .skillsContainer {
   display: flex;
+  justify-content: space-between;
 }
 
 .skillsDesc {
-  width: 65%;
+  width: 70%;
+}
+
+.skillsText {
+  font-size: 1.1rem;
 }
 
 .companiesList {
@@ -53,7 +58,10 @@
 }
 
 .codePenAside {
-  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
 }
 
 .codePenBox {
@@ -64,11 +72,16 @@
 
 .devIconsContainer {
   width: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.devIconsBox {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  padding: 0 100px;
 }
 
 .devIcons {
@@ -76,15 +89,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  margin: 10px 0;
+  width: 15%;
+  margin: 20px;
   text-align: center;
   p {
-    font-weight: 700;
+    font-size: .8rem;
+    font-weight: 500;
     margin: 10px 10px 0;
   }
   svg {
-    width: 100%;
+    width: 50px;
     fill: #9c97c8;
   }
 }

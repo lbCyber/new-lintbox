@@ -1,14 +1,14 @@
 const common = {
   doBackgroundGen: (lightMode) => {
     let dir = 1;
-    if (Math.floor(Math.random() + 1) > 0) {
+    if (Math.floor(Math.random() * 2)) {
       dir = -1;
     }
 
-    const rot = Math.floor(Math.random() * 720) - 360,
-          pie1 = Math.floor((Math.random() * 75) + ((Math.random() * 40) - 20)),
-          pie2 = Math.min(Math.floor(Math.random() * (pie1 + 2)) + pie1 + (Math.random() * dir * 20), 80),
-          pie3 = Math.min(Math.floor(Math.random() * (pie2 + 2)) + pie2 + (Math.random() * dir * 20), 90);
+    const rot = Math.floor(Math.random() * 360 * dir),
+          pie1 = Math.max(Math.floor(Math.random() * 45), 25),
+          pie2 = Math.max(Math.floor((Math.random() * 45) + pie1), pie1 + 25),
+          pie3 = 100 - pie1 - pie2;
 
     let colour1, colour2, colour3
     if (lightMode) {
@@ -21,7 +21,10 @@ const common = {
       colour3 = "#2B333C"
     }
 
-    return {backgroundImage: `linear-gradient(${rot}deg, ${colour1} 0% ${pie1}%, transparent ${pie1}% 100%), linear-gradient(${rot + 40 * dir}deg, ${colour2} 0% ${pie2}%, transparent ${pie2}% 100%), linear-gradient(${rot + 80 * dir}deg, ${colour3} 0% ${pie3}%, transparent ${pie3}% 100%)`}
+    return {backgroundImage: `
+      linear-gradient(${rot * dir}deg, ${colour1} 0% ${pie1}%, transparent ${pie1}% 100%),
+      linear-gradient(${rot + (40 * dir)}deg, ${colour2} 0% ${pie2}%, transparent ${pie2}% 100%),
+      linear-gradient(${rot + (80 * dir)}deg, ${colour3} 0% ${pie3}%, transparent ${pie3}% 100%)`}
   }
 }
 

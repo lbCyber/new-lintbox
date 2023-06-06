@@ -19,11 +19,16 @@
 
 * {
   scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+  &::-webkit-scrollbar-track {
+    opacity: 0;
+  }
   &::-webkit-scrollbar {
     width: 1rem;
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 25px;
+    background-color: #FFF6;
   }
 }
 
@@ -36,17 +41,23 @@
 }
 
 html {
-  font: 125% $heebo;
+  font: 125% $readex;
 }
 
 body {
   font-size: 1rem;
   position: relative;
+  color: $fgColor;
+  background-color: $bgColor;
 }
 
 a,
 .upArrow {
   text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: $amber;
+  }
 }
 
 img {
@@ -59,34 +70,45 @@ ul {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 500;
+  color: $lightBlue;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 400;
+  color: $fgColor;
 }
 
 h3 {
   text-transform: uppercase;
+  color: $lightBlue;
 }
 
 h4 {
   font-family: $special;
   font-size: 2rem;
   margin: 60px 0 20px 30px;
+  color: inherit;
+}
+
+h5 {
+  color: $lightBlue;
 }
 
 h6 {
   text-transform: uppercase;
   font-size: 0.6rem;
   line-height: 26px;
+  color: $lightBlue;
   &.ds {
     font-size: .4rem;
     text-align: center;
     transform: translateY(-5px);
     font-style: italic;
+    color: #777;
+    text-shadow: 0 0 5px #000
   }
   &.smallCaption {
     font-size: .5rem;
@@ -109,20 +131,20 @@ section {
   overflow: hidden;
 }
 
-main section {
-  position: relative;
-  overflow: visible;
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    top: -50px;
-    backdrop-filter: blur(25px);
-    mask-image: linear-gradient(180deg, transparent 0%, #000 50%, transparent 100%);
-    z-index: 1;
-  }
-}
+// main section {
+//   position: relative;
+//   overflow: visible;
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     width: 100%;
+//     height: 100px;
+//     top: -50px;
+//     backdrop-filter: blur(25px);
+//     mask-image: linear-gradient(180deg, transparent 0%, #000 50%, transparent 100%);
+//     z-index: 1;
+//   }
+// }
 
 
 /*  COMMON ELEMENTS */
@@ -154,6 +176,8 @@ main section {
   z-index: 0;
   height: 150px;
   transform: rotate(17deg);
+  color: $lightBlue;
+  text-shadow: 0 0 10px #000;
 }
 
 .backgroundStyle {
@@ -164,6 +188,11 @@ main section {
   background-repeat: no-repeat;
   background-size: 100%;
   opacity: 0.5;
+  background-image:
+    linear-gradient(-25deg, $darkGrey 0 27.85%, transparent 28% 100%),
+    linear-gradient(-65deg, $darkSlate 0% 29.85%, transparent 30% 100%),
+    linear-gradient(-80deg, $slate 0 34.85%, transparent 35% 100%),
+    linear-gradient($bgColor, $bgColor);
 }
 
 .fadeBorder {
@@ -173,4 +202,5 @@ main section {
   left: 0;
   border-radius: 50px;
   z-index: 1;
+  background-image: linear-gradient(#000 10%, transparent 33% 67%, #000 90%);
 }

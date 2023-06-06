@@ -95,7 +95,7 @@ const Skills = ({background, lightMode, reduceMotion}) => {
   return (
     <section
       id="skills"
-      className="skillsSection sectionBackground"
+      className="skillsSection"
       style={background}
       onMouseMove={mouseCap}
       onMouseLeave={mouseCapReset}

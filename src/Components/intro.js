@@ -14,7 +14,7 @@ const Intro = ({background}) => {
   const [getGame, setGame] = useState(randGame[randNum])
 
   return (
-    <section id="intro" className="aboutSection sectionBackground" style={background}>
+    <section id="intro" className="aboutSection" style={background}>
       <div className="wrapper">
         <div>
           <h5>About</h5>

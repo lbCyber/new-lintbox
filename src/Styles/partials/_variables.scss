@@ -1,12 +1,12 @@
-//  VARIABLES
 //..  FONTS
-$heebo: Heebo,
-sans-serif;
-$special: Special Elite,
-serif;
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&family=Special+Elite&display=swap');
+
+$readex: 'Readex Pro', sans-serif;
+$special: 'Special Elite', serif;
 
 //..  COLOURS
-$bgColor: #1A1420;
+$bgColor: #181A1F;
+$bgColorLight: #FFF;
 $fgColor: #EEEFFF;
 $accent1: #48A0F0;
 $accent2: #EF9E76;

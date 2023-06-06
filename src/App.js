@@ -1,6 +1,5 @@
 import "./Styles/main.scss";
 import { useState, useEffect } from "react";
-import common from "./Components/modules/commonFunctions";
 import Header from "./Components/Header";
 import Intro from "./Components/Intro";
 import Skills from "./Components/Skills";
@@ -32,16 +31,12 @@ function App() {
           ${reduceMotion ? " reducedMotionNoOS" : ""}
           ${lightMode ? " lightMode" : ""}`}>
       <main>
-        <Header
-          background={common.doBackgroundGen(lightMode)} />
+        <Header />
         <Skills
-        background={common.doBackgroundGen(lightMode)}
         lightMode={lightMode}
         reduceMotion={reduceMotion} />
-        <Intro
-          background={common.doBackgroundGen(lightMode)}/>
-        <Contact
-          background={common.doBackgroundGen(lightMode)} />
+        <Intro />
+        <Contact />
       </main>
     </div>
   );

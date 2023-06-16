@@ -1,0 +1,67 @@
+.devIcons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  margin: 20px;
+  text-align: center;
+  p {
+    font-size: .8rem;
+    font-weight: 500;
+    margin: 10px 10px 0;
+  }
+  svg {
+    width: 50px;
+    fill: #9c97c8;
+  }
+}
+
+.codePenAside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 350px;
+  background-image: url("../../assets/cparrow.png");
+  background-repeat: no-repeat;
+  background-position: 97.5% 30px;
+  background-size: 60px;
+  h4 {
+    font-size: 1.3rem;
+    margin: 0;
+    text-align: center;
+    padding: 0 50px 15px;
+  }
+}
+
+.codePenBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #FFF5;
+  border-radius: 10px;
+  background: #484a5f33;
+  box-shadow: 0 0 30px #0001;
+  transition: background .3s, box-shadow .3s;
+  &:hover {
+    background: #BDF2;
+    box-shadow: 0 0 50px #0008;
+  }
+  p {
+    font-size: .8rem;
+  }
+}
+
+.codePenImage {
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 auto;
+  img {
+    width: 150px;
+  }
+}

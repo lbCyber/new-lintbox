@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faPaintbrush } from "@fortawesome/free-solid-svg-icons";
 import doPreload from "./modules/preloader";
 
-const Header = ({background}) => {
+const Header = ({background, reduceMotionToggle, lightModeToggle}) => {
   const [profilePic, setProfilePic] = useState(true);
   const [profileToggle, setProfileToggle] = useState(false);
   const [animReady, setAnimReady] = useState(false);
@@ -102,6 +102,8 @@ const Header = ({background}) => {
               href="https://www.linkedin.com/in/procc/"
               rel="noopener noreferrer" >my LinkedIn profile</a>!
           </h5>
+          <h5 onMouseDown={lightModeToggle}>light mode</h5>
+          <h5 onMouseDown={reduceMotionToggle}>reduce motion</h5>
         </div>
       </div>
     </header>

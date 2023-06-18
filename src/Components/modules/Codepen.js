@@ -33,13 +33,15 @@ const Codepen = () => {
 
   return (
     <aside className="codePenAside">
-      <h4>Check out a CodePen!</h4>
-      <a href={codePenPeek[3]} className="codePenBox" target="_blank" rel="noopener noreferrer">
-        <div className="codePenImage">
-          <img src={codePenPeek[2]} alt={codePenPeek[1]}/>
-        </div>
-        <p>{codePenPeek[0]}</p>
-      </a>
+      <div className="codePenContainer">
+        <h4>Check out a CodePen!</h4>
+        <a href={codePenPeek[3]} className="codePenBox" target="_blank" rel="noopener noreferrer">
+          <div className="codePenImage">
+            <img src={codePenPeek[2]} alt={codePenPeek[1]}/>
+          </div>
+          <p>{codePenPeek[0]}</p>
+        </a>
+      </div>
     </aside>
   )
 }

@@ -11,8 +11,16 @@ function App() {
       .matches;
   };
   const [lightMode, setLightMode] = useState(false);
-  const [currentPage, setCurrentPage] = useState(0);
+  // const [currentPage, setCurrentPage] = useState(0);
   const [reduceMotion, setReduceMotion] = useState(getPRM);
+
+  const lightModeToggle = () =>{
+    setLightMode(!lightMode)
+  }
+
+  const reduceMotionToggle = () =>{
+    setReduceMotion(!reduceMotion)
+  }
 
   useEffect(() => {
     const currPRMState = window.matchMedia("(prefers-reduced-motion: no-preference)");
@@ -31,10 +39,13 @@ function App() {
           ${reduceMotion ? " reducedMotionNoOS" : ""}
           ${lightMode ? " lightMode" : ""}`}>
       <main>
-        <Header />
+        <Header
+          reduceMotionToggle={reduceMotionToggle}
+          lightModeToggle={lightModeToggle}
+          reduceMotion={reduceMotion} />
         <Skills
-        lightMode={lightMode}
-        reduceMotion={reduceMotion} />
+          lightMode={lightMode}
+          reduceMotion={reduceMotion} />
         <Intro />
         <Contact />
       </main>

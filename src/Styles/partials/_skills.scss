@@ -1,7 +1,3 @@
-.skillsSection {
-  padding: 80px 0 160px;
-}
-
 .skillsContainer {
   display: flex;
   justify-content: space-between;
@@ -19,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 10px 80px;
+  padding: 10px
 }
 
 .companyLogoItem {
@@ -30,6 +26,7 @@
   transform-style: preserve-3d;
   transform: perspective(500px) rotateY(0) rotateX(0);
   position: relative;
+  box-shadow: -10px 10px 20px #0004;
 }
 
 .shine {
@@ -55,22 +52,4 @@
 .companiesContainer {
   position: relative;
   width: 100%;
-}
-
-.devIcon {
-  max-width: 100px;
-}
-
-.devIconsContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.devIconsBox {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 0 100px;
 }

@@ -171,6 +171,9 @@
   margin: 0 auto;
   a {
     color: $accent2;
+    &:hover {
+      color: $amber;
+    }
   }
 }
 

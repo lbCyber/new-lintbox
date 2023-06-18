@@ -55,6 +55,7 @@ a,
 .upArrow {
   text-decoration: none;
   color: inherit;
+  transition: color .3s;
   &:hover {
     color: $amber;
   }
@@ -89,7 +90,7 @@ h3 {
 h4 {
   font-family: $special;
   font-size: 2rem;
-  margin: 60px 0 20px 30px;
+  margin: 100px 0 20px 30px;
   color: inherit;
 }
 

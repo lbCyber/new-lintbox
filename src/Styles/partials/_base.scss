@@ -92,6 +92,9 @@ h4 {
   font-size: 2rem;
   margin: 100px 0 20px 30px;
   color: inherit;
+  &.fh4 {
+    margin: 0 0 20px 30px;
+  }
 }
 
 h5 {
@@ -127,7 +130,6 @@ section {
   justify-content: center;
   align-items: center;
   position: relative;
-  min-height: 100vh;
   flex-direction: column;
   overflow: hidden;
 }
@@ -154,7 +156,6 @@ section {
   max-width: 1280px;
   margin: 0 auto;
   width: 90%;
-  padding-bottom: 50px; // Definitely delete this when in prod
 }
 
 .sectionBackground {

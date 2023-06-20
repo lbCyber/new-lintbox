@@ -33,24 +33,11 @@
         z-index: 10;
       }
 
-      .mePicLayerAnim {
-        border-radius: 480px;
-        overflow: hidden;
-        width: 0px;
-        height: 0px;
-        img {
-          width: 480px;
-        }
-      }
-
       .profilePic.activeAnim {
         animation: profileFlash 1 forwards .5s;
       }
 
       .activeAnim .mePicLayerAnim {
-        width: 720px;
-        height: 720px;
-        border-radius: 0 20% 20%;
         transition-duration: 1.4s;
       }
 
@@ -68,20 +55,36 @@
           filter: brightness(1);
         }
       }
+    }
+  }
 
-      @media (max-width: 1024px) {
-        .mePicLayerAnim {
-          border-radius: 360px;
-          img {
-            width: 360px;
-          }
-        }
+  .activeAnim .mePicLayerAnim {
+    width: 720px;
+    height: 720px;
+    border-radius: 0 20% 20%;
+  }
 
-        .activeAnim .mePicLayerAnim {
-          width: 540px;
-          height: 540px;
-        }
+  .mePicLayerAnim {
+    border-radius: 480px;
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    img {
+      width: 480px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .mePicLayerAnim {
+      border-radius: 360px;
+      img {
+        width: 360px;
       }
+    }
+
+    .activeAnim .mePicLayerAnim {
+      width: 540px;
+      height: 540px;
     }
   }
 

@@ -3,10 +3,6 @@
   justify-content: space-between;
 }
 
-.skillsDesc {
-  flex-basis: calc(100% - 350px);
-}
-
 .skillsText {
   font-size: 1.1rem;
 }
@@ -15,18 +11,30 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 10px
+  padding: 10px;
+  @media screen and (max-width: 565px) {
+    flex-wrap: wrap;
+  }
 }
 
 .companyLogoItem {
   border-radius: 10px;
   max-width: 300px;
+  width: calc(25% - 30px);
+  min-width: 100px;
   overflow: hidden;
-  margin: 0 20px;
+  margin: 0 15px;
   transform-style: preserve-3d;
   transform: perspective(500px) rotateY(0) rotateX(0);
   position: relative;
   box-shadow: -10px 10px 20px #0004;
+  @media screen and (max-width: 565px) {
+    transition: unset !important;
+    max-width: unset;
+    min-width: unset;
+    width: 150px !important;
+    margin: 0 10px 15px;
+  }
 }
 
 .shine {
@@ -52,4 +60,8 @@
 .companiesContainer {
   position: relative;
   width: 100%;
+  h4 {
+    font-size: 1.4rem;
+    margin: 50px 0 10px;
+  }
 }

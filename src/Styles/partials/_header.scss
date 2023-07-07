@@ -67,7 +67,7 @@
 }
 
 .headerSection {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -89,6 +89,7 @@
     margin-top: 20px;
     width: 1000px;
     text-align: right;
+    color: $amber;
   }
 }
 
@@ -144,6 +145,7 @@
 .learnMore {
   position: relative;
   text-align: center;
+  font-size: 2rem;
 }
 
 // .learnMore:after, .learnMore:before {
@@ -175,9 +177,38 @@
       color: $amber;
     }
   }
+  h5 {
+    max-width: 500px
+  }
+  .oldPage {
+    max-width: 500px;
+    font-size: .8rem;
+    margin-top: 50px;
+    p:last-child {
+      margin-top: 10px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 1.6rem;
+  }
 }
 
 .scrollDown {
   font-size: 1.7rem;
   margin-bottom: calc(15px + 4vh);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  @media screen and (max-width: 500px) {
+    margin-top: 15%;
+    width: 100%;
+  }
+}
+
+.resumeHeadingBottom {
+  margin-top: 15px;
 }

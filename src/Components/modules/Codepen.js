@@ -34,7 +34,7 @@ const Codepen = () => {
   return (
     <aside className="codePenAside">
       <div className="codePenContainer">
-        <h4>Check out a CodePen!</h4>
+        <h3>While you're here, why not check out a CodePen?</h3>
         <a href={codePenPeek[3]} className="codePenBox" target="_blank" rel="noopener noreferrer">
           <div className="codePenImage">
             <img src={codePenPeek[2]} alt={codePenPeek[1]}/>

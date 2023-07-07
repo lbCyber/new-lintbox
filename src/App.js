@@ -1,23 +1,20 @@
 import "./Styles/main.scss";
 import { useState, useEffect } from "react";
-import Header from "./Components/Header";
-import Intro from "./Components/Intro";
-import Skills from "./Components/Skills";
-import Contact from "./Components/Contact";
+import Header from "./Components/HeaderTop";
+import Footer from "./Components/Footer";
 
 function App() {
+
   const getPRM = () => {
     return !window.matchMedia("(prefers-reduced-motion: no-preference)")
       .matches;
   };
   const [lightMode, setLightMode] = useState(false);
-  // const [currentPage, setCurrentPage] = useState(0);
   const [reduceMotion, setReduceMotion] = useState(getPRM);
 
   const lightModeToggle = () =>{
     setLightMode(!lightMode)
   }
-
   const reduceMotionToggle = () =>{
     setReduceMotion(!reduceMotion)
   }
@@ -43,12 +40,8 @@ function App() {
           reduceMotionToggle={reduceMotionToggle}
           lightModeToggle={lightModeToggle}
           reduceMotion={reduceMotion} />
-        <Skills
-          lightMode={lightMode}
-          reduceMotion={reduceMotion} />
-        <Intro />
-        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }

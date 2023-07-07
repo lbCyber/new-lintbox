@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Skills from "./SkillsTemp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faPaintbrush } from "@fortawesome/free-solid-svg-icons";
 import doPreload from "./modules/preloader";
@@ -41,7 +42,7 @@ const Header = ({background, reduceMotionToggle, lightModeToggle}) => {
 
   return (
     <header className="headerSection" style={background}>
-      <div className="wrapper">
+      <div className="wrapper frontPageWrapper">
         <div className="headerContainer">
           <div className="centerHeaderItems">
             <div className="backgroundStyle"></div>
@@ -90,21 +91,7 @@ const Header = ({background, reduceMotionToggle, lightModeToggle}) => {
           </div>
           <h3>And I'm a web and software developer</h3>
         </div>
-        <div className="learnMore">
-          <h3 className="scrollDown">
-            <a href="#Skills" className="learnMoreLink">Click here</a> to learn more about me
-          </h3>
-          <h5 className="resumeHeadingMiddle">
-            Or you can cut right to it and check out <a
-              href="https://lintbox.com/procca-resume-general.pdf"
-              target="_blank"
-              rel="noopener noreferrer">my resume</a> or <a
-              href="https://www.linkedin.com/in/procc/"
-              rel="noopener noreferrer" >my LinkedIn profile</a>!
-          </h5>
-          <h5 onMouseDown={lightModeToggle}>light mode</h5>
-          <h5 onMouseDown={reduceMotionToggle}>reduce motion</h5>
-        </div>
+        <Skills />
       </div>
     </header>
   );

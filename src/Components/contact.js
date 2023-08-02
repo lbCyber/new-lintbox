@@ -14,7 +14,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="contactSection" style={background}>
+    <section id="contact" className="contactSection">
       <form onSubmit={handleFormSubmit}>
       <label htmlFor="email">Email Address</label>
       <input

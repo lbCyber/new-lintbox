@@ -1,0 +1,43 @@
+/* Fonts - Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&display=swap');
+
+/* Fonts - Assignment */
+
+$font2: "Readex Pro";
+$font1: "Readex Pro";
+
+/* Fonts - Elements */
+
+$fontReg: $font1;
+$fontHighlight: $font1;
+$headingReg: $font1;
+$headingHighlight: $font1;
+$contentReg: $font1;
+$contentHighlight: $font1;
+
+
+/* Colours - Palette */
+
+$amber: #e99b36;
+$lightBlue: #48a0f0;
+$white: #FFF;
+$darkGrey: #3b3b3f; //     rgba(59,59,63,1.000)
+$faintBlue: #9c97c8; //    rgba(156,151,200,1.000)
+$faintGrey: #a3b2c4; //    rgba(163,178,196,1.000)
+$darkSlate: #484a5f; //    rgba(72,74,95,1.000)
+$fadedSlate: #9A8FAA;
+$slate: #567;
+$lightBlue: #48a0f0; //    rgba(72,160,240,1.000)
+$amber: #e99b36; //        rgba(233,155,54,1.000)
+
+
+/* Colours - Elements */
+
+$accent1: $lightBlue;
+$accent2: $amber;
+$headingWhite: $white;
+$contentWhite: $white;
+$bgColourLight: $white;
+$bgColour: #181A1F;
+$fgColour: #EEEFFF;

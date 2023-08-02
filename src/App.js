@@ -1,9 +1,12 @@
 import "./Styles/main.scss";
 import { useState, useEffect } from "react";
+import Nav from "./Components/Nav";
 import Header from "./Components/Header";
-import Intro from "./Components/Intro";
 import Skills from "./Components/Skills";
+import Work from "./Components/Work";
+import About from "./Components/About";
 import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
 
 function App() {
   const getPRM = () => {
@@ -11,7 +14,6 @@ function App() {
       .matches;
   };
   const [lightMode, setLightMode] = useState(false);
-  // const [currentPage, setCurrentPage] = useState(0);
   const [reduceMotion, setReduceMotion] = useState(getPRM);
 
   const lightModeToggle = () =>{
@@ -38,17 +40,15 @@ function App() {
       className={`MainApp
           ${reduceMotion ? " reducedMotionNoOS" : ""}
           ${lightMode ? " lightMode" : ""}`}>
+      <Nav />
+      <Header />
       <main>
-        <Header
-          reduceMotionToggle={reduceMotionToggle}
-          lightModeToggle={lightModeToggle}
-          reduceMotion={reduceMotion} />
-        <Skills
-          lightMode={lightMode}
-          reduceMotion={reduceMotion} />
-        <Intro />
+        <Skills />
+        <Work />
+        <About />
         <Contact />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -1,16 +1,9 @@
-const Nav = ({ reduceMotion, setReduceMotion, currentPage, setCurrentPage, lightMode, setLightMode }) => {
-
-  const reducedClick = () => {
-    setReduceMotion(!reduceMotion)
-  }
-
-  const lightModeClick = () => {
-    setLightMode(!lightMode)
-  }
+const Nav = () => {
 
   return (
-    <>
-    </>
+    <nav>
+      Navigation
+    </nav>
   )
 }
 

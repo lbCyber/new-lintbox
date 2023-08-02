@@ -29,19 +29,8 @@ const Codepen = () => {
     ],
   ]
 
-  const [codePenPeek] = useState(peeks[Math.floor(Math.random() * 3) + 1])
-
   return (
     <aside className="codePenAside">
-      <div className="codePenContainer">
-        <h4>Check out a CodePen!</h4>
-        <a href={codePenPeek[3]} className="codePenBox" target="_blank" rel="noopener noreferrer">
-          <div className="codePenImage">
-            <img src={codePenPeek[2]} alt={codePenPeek[1]}/>
-          </div>
-          <p>{codePenPeek[0]}</p>
-        </a>
-      </div>
     </aside>
   )
 }

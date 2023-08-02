@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
-const Contact = ({background}) => {
+const Contact = () => {
 
   const [formState, handleSubmit] = useForm("mvonyvyz");
   const [formSubmitted, setFormSubmitted] = useState(false);

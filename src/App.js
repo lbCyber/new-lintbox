@@ -41,11 +41,13 @@ function App() {
           ${reduceMotion ? " reducedMotionNoOS" : ""}
           ${lightMode ? " lightMode" : ""}`}>
       <Nav />
+      <h5 onMouseDown={lightModeToggle}>light mode</h5>
+      <h5 onMouseDown={reduceMotionToggle}>reduce motion</h5>
       <Header />
       <main>
+        <About />
         <Skills />
         <Work />
-        <About />
         <Contact />
       </main>
       <Footer />

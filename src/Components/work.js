@@ -4,7 +4,9 @@ const Work = () => {
     <section
       id="work"
       classname="workSection">
-        Work section
+        <div className="wrapper">
+          Work section
+        </div>
     </section>
   )
 }

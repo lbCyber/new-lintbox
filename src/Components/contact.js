@@ -15,27 +15,29 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contactSection">
-      <form onSubmit={handleFormSubmit}>
-      <label htmlFor="email">Email Address</label>
-      <input
-        id="email"
-        type="email"
-        name="email" />
-      <ValidationError
-        prefix="Email"
-        field="email"
-        errors={formState.errors} />
-      <textarea
-        id="message"
-        name="message" />
-      <ValidationError
-        prefix="Message"
-        field="message"
-        errors={formState.errors} />
-      <button
-        type="submit"
-        disabled={formState.submitting}>Submit</button>
-    </form>
+      <div className="wrapper">
+        <form onSubmit={handleFormSubmit}>
+        <label htmlFor="email">Email Address</label>
+        <input
+          id="email"
+          type="email"
+          name="email" />
+        <ValidationError
+          prefix="Email"
+          field="email"
+          errors={formState.errors} />
+        <textarea
+          id="message"
+          name="message" />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={formState.errors} />
+        <button
+          type="submit"
+          disabled={formState.submitting}>Submit</button>
+      </form>
+    </div>
   </section>
   );
 }

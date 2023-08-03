@@ -2,7 +2,9 @@ const Nav = () => {
 
   return (
     <nav>
-      Navigation
+      <div className="wrapper">
+        Navigation
+      </div>
     </nav>
   )
 }

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCamera, faPaintbrush } from "@fortawesome/free-solid-svg-icons";
+import { faCamera, faPaintbrush, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import doPreload from "./modules/preloader";
 
-const Header = ({background, reduceMotionToggle, lightModeToggle}) => {
+const Header = () => {
   const [profilePic, setProfilePic] = useState(true);
   const [profileToggle, setProfileToggle] = useState(false);
   const [animReady, setAnimReady] = useState(false);
@@ -40,7 +40,7 @@ const Header = ({background, reduceMotionToggle, lightModeToggle}) => {
   }, [profileToggle, firstLoad, profileLoading]);
 
   return (
-    <header className="headerSection" style={background}>
+    <header className="headerSection">
       <div className="wrapper">
         <div className="headerContainer">
           <div className="centerHeaderItems">
@@ -102,8 +102,10 @@ const Header = ({background, reduceMotionToggle, lightModeToggle}) => {
               href="https://www.linkedin.com/in/procc/"
               rel="noopener noreferrer" >my LinkedIn profile</a>!
           </h5>
-          <h5 onMouseDown={lightModeToggle}>light mode</h5>
-          <h5 onMouseDown={reduceMotionToggle}>reduce motion</h5>
+        </div>
+        <div className="chevrons">
+          <FontAwesomeIcon icon={faChevronDown} />
+          <FontAwesomeIcon icon={faChevronDown} />
         </div>
       </div>
     </header>
